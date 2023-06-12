@@ -1,0 +1,221 @@
+import styled from "styled-components";
+import Link from "next/link";
+import { 
+  FaInstagram,
+  FaFacebookSquare
+} from 'react-icons/fa'
+
+
+const FooterBlock = styled.div`
+  border-top: 1px solid #00000011;
+  padding: 8rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  ${props => props.fade && 'opacity: 0.6'};
+  @media (max-width: 768px) {
+    padding: 6rem 0 1.5rem 0; 
+    font-size: 1.4rem;
+  }
+
+`
+
+const FooterContainer = styled.div`
+  margin: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Jost', sans-serif;
+  color: #333333;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  @media (max-width: 768px) {
+    margin: 0 1rem;
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+  @media (min-width: 1320px) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+`
+
+const FooterCopyrightContainer = styled.div`
+  width: 100%;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2rem;
+  color: #666666;
+  border-top: 1px solid #00000022;
+`
+
+const LinkStyled = styled(Link)`
+  width: fit-content;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+
+  :hover {
+    color: goldenrod;
+  }
+`
+
+const LinkStyledDSCW = styled.p`
+  margin: 0;
+`
+
+const FooterSocialsLogosContainer = styled.div`
+  display: flex; 
+  font-size: 3rem;
+`
+
+const InstaIcon = styled(FaInstagram)`
+  margin: 1.65rem 1.65rem 0 -.2rem;
+  color: #777777;
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+  :hover {
+    color: #bbbbbb;
+  }
+`
+
+const FBIcon = styled(FaFacebookSquare)`
+  margin: 1.65rem 1.65rem 0 -.2rem;
+  color: #777777;
+  border-radius: 12px;
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+  :hover {
+    color: #bbbbbb;
+  }
+`
+
+const FooterColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  line-height: 2.2;
+  @media (max-width: 700px) {
+    line-height: 2.4; 
+  }
+`
+
+const FooterContactSection = styled(FooterColumn)`
+  flex: 3 0 0;
+  min-width: 36rem;
+`
+
+const FooterNavSection = styled(FooterColumn)`
+  flex: 1 0 0;
+  min-width: 16rem;
+  @media (max-width: 600px) {
+    min-width: 8rem; 
+  }
+  @media (max-width: 480px) {
+    margin-top: 1rem;
+    padding-top: 2.2rem;
+    border-top: 1px solid #00000033;
+  }
+`
+
+const FooterOpeningHoursSection = styled(FooterColumn)`
+  flex-direction: row;
+  p {
+    margin: 0;
+  }
+  @media (max-width: 480px) {
+    margin-top: 3rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid #00000033;
+  }
+`
+
+const Days = styled(FooterColumn)`
+  margin-right: 8rem;
+  flex-shrink: 0;
+  @media (max-width: 1200px) {
+    margin-right: 4vw;
+  }
+`
+
+const Times = styled(FooterColumn)`
+  flex: 1 0;
+`
+
+export default function FooterNew({ fade }) {
+  return (
+    <FooterBlock
+      fade={fade}
+    >
+      <FooterContainer>
+        <FooterContactSection>
+          <LinkStyledDSCW>Doc Sprocket Cycle Workshop</LinkStyledDSCW>
+          <LinkStyled rel="noopener noreferrer" target="_blank" href="https://g.page/doc-sprocket-cycle-workshop?share">555A King St Newtown NSW 2042</LinkStyled>
+          <LinkStyled rel="noopener noreferrer" target="_blank" href="mailto:info@docsprocket.com.au">info@docsprocket.com.au</LinkStyled>
+          <LinkStyled rel="noopener noreferrer" target="_blank" href="tel: +61450519496">0450 519 496</LinkStyled>
+          <FooterSocialsLogosContainer>
+            <Link rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/docsprocketnewtown/"><InstaIcon /></Link>
+            <Link rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/docsprocketnewtown/"><FBIcon /></Link>
+          </FooterSocialsLogosContainer>
+        </FooterContactSection>
+        <FooterNavSection>
+          <LinkStyled href="/">Home</LinkStyled>
+          <LinkStyled href="/bikes">Bikes</LinkStyled>
+          <LinkStyled href="/workshop">Workshop</LinkStyled>
+          <LinkStyled href="/customs">Customs</LinkStyled>
+          <LinkStyled href="/ebikes">eBikes</LinkStyled>
+          <LinkStyled href="/about">About</LinkStyled>
+        </FooterNavSection>
+        <FooterOpeningHoursSection>
+          <Days>
+            <p>mon</p>
+            <p>tue</p>
+            <p>wed</p>
+            <p>thu</p>
+            <p>fri</p>
+            <p>sat</p>
+            <p>sun</p>
+          </Days>
+          <Times>
+            <p>x</p>
+            <p>10 - 17.30</p>
+            <p>10 - 17.30</p>
+            <p>10 - 17.30</p>
+            <p>10 - 17.30</p>
+            <p>11 - 16.00</p>
+            <p>x</p>
+          </Times>
+        </FooterOpeningHoursSection>
+        <FooterCopyrightContainer id="contact">
+          &copy; DSCW 2023 | Built with&nbsp;
+          <Link 
+            style={{color: 'inherit'}}
+            rel="noopener noreferrer" 
+            target="_blank" 
+            href="https://nextjs.org/"
+          >
+            NextJS
+          </Link> by House of Sprocqu&eacute; 
+        </FooterCopyrightContainer>
+      </FooterContainer>
+      
+    </FooterBlock>
+  )
+}
+
+// CONTACT COLUMN
+// logo
+// address
+// phone
+// email
+// insta
+// fb
+
+// NAV COLUMN
+// Home
+// About
+// Bikes
+// Workshop
+// ebikes
+// customs

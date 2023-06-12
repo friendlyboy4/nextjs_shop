@@ -5,7 +5,7 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    unoptimized: true,
+    // unoptimized: true,
     loader: "default",
     domains: ["localhost"],
     remotePatterns: [

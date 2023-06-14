@@ -25,7 +25,14 @@ const GridImageContainer = styled.div`
       'flex: 1; margin-right: 1em;'
     }
   }
+  @media (max-width: 480px) {
+    ${props => props.frontpage && 
+      'aspect-ratio: 8 / 5;'
+    }
+  }
 `
+
+
 const GridSizeBox = styled.div`
   position: absolute;
   background-color: #ffffffcc;

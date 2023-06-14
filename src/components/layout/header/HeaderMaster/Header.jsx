@@ -9,11 +9,11 @@ import HeaderLogo from "./HeaderLogo";
 
 
 const HeaderContainer = styled.header`
-  font-family: 'League Spartan', sans-serif;
+  font-family: 'Jost', sans-serif;
   position: sticky;
   top: 0;
   z-index: 99;
-  padding: 0 1rem;
+  padding: 0 1rem 0 0;
   background-color: ${props => props.theme.colors.headerBGColor};
   backdrop-filter: ${props => props.theme.colors.headerBlur};
   filter: drop-shadow(2px 2px 5px #00000011);
@@ -25,6 +25,9 @@ const HeaderContainer = styled.header`
   }
   @media (min-width: 768px) and (max-width: 1000px) {
     font-size: 0.8rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.7rem; 
   }
 `
 const HeaderInnerContainer = styled.div`
@@ -45,19 +48,20 @@ const HeaderContentContainer = styled.div`
     background-color: ${props => props.theme.colors.headerBGColor};
     backdrop-filter: ${props => props.theme.colors.headerBlur};
     position: fixed;
+    padding-left: 1rem;
     top: 6.8rem;
     width: 30rem;
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
     border-right: 1px solid #eeeeee;
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
+    transform: translateX(-110%);
+    -webkit-transform: translateX(-110%);
     transition: transform .3s ease, opacity .2s ease;
     opacity: 0;
     &.active {
       opacity: 1;
-      transform: translateX(0%);
+      transform: translateX(0);
     }
   }
 
@@ -72,10 +76,11 @@ export default function Header({ navbarChange, navbarIsOpen, navbarClose }) {
 
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-        setShow(false);
+      // if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+      if (window.scrollY < lastScrollY || window.scrollY < 50) {
+        setShow(true);
       } else {
-        setShow(true)
+        setShow(false)
       }
       setLastScrollY(window.scrollY)
     }

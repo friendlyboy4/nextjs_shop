@@ -10,13 +10,11 @@ const HeaderRightContainer = styled.div`
   flex: 2;
   justify-content: flex-end;
   align-items: center;
-  font-weight: 600;
+  font-weight: 500;
   @media (max-width: 768px) {
-    font-weight: 600;
     flex-direction: column; 
     margin-top: 2rem;
     justify-content: flex-start;
-    font-size: .9em;
   }
 `
 
@@ -46,7 +44,7 @@ const TextContainer = styled.div`
 
 const TextItem = styled.div`
   padding: 0 2em 0 0;
-  font-size: 2em;
+  font-size: 2.2em;
   color: ${props => props.theme.colors.headerFontColor};
   transition: color 0.3s ease;
   @media (max-width: 768px) {

@@ -8,7 +8,7 @@ const HeaderLeftContainer = styled.div`
   /* line-height: 1; */
   @media (max-width: 768px) {
     flex: 0;
-    font-weight: 600;
+    font-weight: 500;
   }
 `
 

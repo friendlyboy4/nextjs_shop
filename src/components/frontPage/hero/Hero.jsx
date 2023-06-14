@@ -11,6 +11,13 @@ const HeroContainer = styled.div`
   filter: ${props => props.theme.effects.dropShadow};
   @media (max-width: 768px) {
     aspect-ratio: 10/6;
+    width: 100vw;
+    margin-left: -2rem;
+    filter: none;
+  }
+  @media (max-width: 480px) {
+    margin-left: -1rem;
+    aspect-ratio: 10/7;
   }
 `
 
@@ -21,6 +28,9 @@ const SlideContainer = styled.div`
   @media (max-width: 768px) {
     aspect-ratio: 10/6;
   } 
+  @media (max-width: 480px) {
+    aspect-ratio: 10/7;
+  }
 `
 
 export default function Hero({ images }) {
@@ -28,7 +38,7 @@ export default function Hero({ images }) {
     autoplay: true,
     autoplaySpeed: 5000,
     speed: 300,
-    lazyLoad: 'progressive',
+    lazyLoad: 'ondemand',
     dots: false,
     infinite: true,
     fade: true,
@@ -43,8 +53,7 @@ export default function Hero({ images }) {
               src={image.attributes.hero_image_lrg.data.attributes.url}
               alt="banner image"
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 100vw, 66vw"
-              // sizes="100vw"
-              // quality={100}
+              loading="eager"
               fill
               style={{maxWidth: "100%", objectFit: "cover",}}
             />

@@ -52,6 +52,7 @@ export default function PageHeadingComponent({text, imgSrc, imgAlt, }) {
         src={imgSrc}
         alt={imgAlt}
         fill
+        loading = 'eager'
         sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 100vw, 66vw"
         style={{
           objectFit: 'cover', 

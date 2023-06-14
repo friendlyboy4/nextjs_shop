@@ -104,14 +104,14 @@ const FooterColumn = styled.div`
 const FooterContactSection = styled(FooterColumn)`
   flex: 3 0 0;
   min-width: 36rem;
+  @media (max-width: 600px) {
+    min-width: 30rem;
+  }
 `
 
 const FooterNavSection = styled(FooterColumn)`
   flex: 1 0 0;
   min-width: 16rem;
-  @media (max-width: 600px) {
-    min-width: 8rem; 
-  }
   @media (max-width: 480px) {
     margin-top: 1rem;
     padding-top: 2.2rem;

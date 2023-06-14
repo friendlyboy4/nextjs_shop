@@ -6,6 +6,7 @@ const HamburgerContainer = styled.div`
   z-index: 3;
   @media (max-width: 768px) {
     display: block;
+    margin-left: 1rem;
   }
 `;
 

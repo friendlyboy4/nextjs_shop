@@ -12,12 +12,10 @@ const GridContainer = styled.div`
   margin: 3rem 0 4rem;
   @media (max-width: 1200px) {
     font-size: .9rem; 
-    column-gap: 1.8em;
   }
   @media (max-width: 768px) {
     margin: 2rem 0 3rem;
     ${props => props.frontpage ? 'grid-template-columns: repeat(1, 1fr);' : 'grid-template-columns: repeat(2, 1fr);'}
-    column-gap: 1.6em;
   }
   @media (max-width: 480px) {
     grid-template-columns: repeat(1, 1fr);

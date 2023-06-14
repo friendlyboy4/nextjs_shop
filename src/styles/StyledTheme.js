@@ -3,7 +3,7 @@
 export const globals = {
   fonts: {
     fontColor: '#333333',
-    fontFamily: "'Lexend Deca', sans-serif",
+    fontFamily: "'Jost', sans-serif",
   },
   colors: {
     headerBGColor: '#ffffffcc',

@@ -60,7 +60,7 @@ const BannerHeadingText = styled.h2`
 
 const BannerCopyText = styled.p`
   color: white;
-  font-family: 'Jost', sans-serif;
+  font-family: ${props => props.theme.fonts.fontFamily};
   font-size: 2.4em;
   background-color: #000000aa;
   text-shadow: 4px 4px 5px #00000088;
@@ -133,6 +133,8 @@ export default function BannerItem({image, imageAlt, linkTo, sectionHeading, tex
             <Image
               src={image}
               alt={imageAlt}
+              placeholder='blur'
+              blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{objectFit: 'cover', borderRadius: '10px'}}

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ServicingOptionsContainer = styled.div`
-  font-family: 'Jost', sans-serif; 
+  font-family: ${props => props.theme.fonts.fontFamily}; 
   color: ${props => props.theme.fonts.fontColor};
   display: flex;
   flex-direction: row;

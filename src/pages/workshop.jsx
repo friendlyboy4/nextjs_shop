@@ -10,7 +10,7 @@ import ImageGallery from "@/components/ImageGallery/ImageGallery";
 import FadeBox from "@/components/layout/components/FadeBox";
 
 const Copy = styled.p`
-  font-family: 'jost', sans-serif;
+  font-family: ${props => props.theme.fonts.fontFamily};
   font-size: 2em;
 `
 
@@ -74,12 +74,13 @@ export default function Workshop({ images }) {
     >
       <NextSeo 
         title="Workshop and repairs"
-        description="Information about servicing, repairs and mechnical work offered by our experienced mechanical workshop."   
+        description="Information about servicing, repairs and mechanical work offered by our experienced mechanical workshop."   
       />
       <PageHeadingComponent 
         text='workshop'
         imgSrc={images.attributes.hero_img_lrg.data.attributes.url}
         imgAlt='image of Doc Sprocket workbench'
+        imgThumbnail={images.attributes.hero_img_lrg.data.attributes.formats.thumbnail.url}
       />
       <Copy>
         Doc Sprocket is first and foremost a <b>mechanical workshop</b>. 

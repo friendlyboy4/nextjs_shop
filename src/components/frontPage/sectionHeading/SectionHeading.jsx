@@ -16,7 +16,7 @@ const HeadingContainer = styled.div`
 
 const HeadingText = styled.h2`
   font-size: 4em;
-  font-family: 'Jost', sans-serif;
+  font-family: ${props => props.theme.fonts.fontFamily};
   margin: 0 auto;
   color: ${props => props.theme.fonts.fontColor};
 `
@@ -27,7 +27,7 @@ const SeeAllButton = styled(Link)`
   padding: .4rem 1rem;
   box-shadow: 2px 2px black;
   border: 1px solid black;
-  font-family: 'Jost', sans-serif;
+  font-family: ${props => props.theme.fonts.fontFamily};
   font-weight: 500;
   text-decoration: none;
   color: inherit;
@@ -66,7 +66,7 @@ const SeeAllButton = styled(Link)`
 
 
 const ButtonText = styled.p`
-  font-family: 'Jost', sans-serif;
+  font-family: ${props => props.theme.fonts.fontFamily};
   font-size: 2em;
   margin: 0;
 `

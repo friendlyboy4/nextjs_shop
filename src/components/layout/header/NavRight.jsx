@@ -65,7 +65,6 @@ const LinkStyled = styled(Link)`
 `
 
 const FBIcon = styled(FaFacebookSquare)`
-  /* margin: 1.65rem 1.65rem 0 -.2rem; */
   color: ${props => props.theme.colors.headerFontColor};
   border-radius: 12px;
   font-size: 2.8em;

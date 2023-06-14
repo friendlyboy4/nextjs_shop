@@ -9,11 +9,10 @@ import HeaderLogo from "./HeaderLogo";
 
 
 const HeaderContainer = styled.header`
-  font-family: 'Jost', sans-serif;
+  font-family: ${props => props.theme.fonts.fontFamily};
   position: sticky;
   top: 0;
   z-index: 99;
-  /* padding: 0 1rem 0 0; */
   padding: 0;
   background-color: ${props => props.theme.colors.headerBGColor};
   backdrop-filter: ${props => props.theme.colors.headerBlur};
@@ -28,9 +27,6 @@ const HeaderContainer = styled.header`
   @media (min-width: 768px) and (max-width: 1000px) {
     font-size: 0.8rem;
   }
-  /* @media (max-width: 480px) {
-    font-size: 0.7rem; 
-  } */
 `
 const HeaderInnerContainer = styled.div`
   max-width: ${props => props.theme.layout.contentWidth};
@@ -103,7 +99,6 @@ export default function Header({ navbarChange, navbarIsOpen, navbarClose }) {
   }, [lastScrollY]);
 
   return (
-    // <HeaderContainer className={`active ${show && 'hidden'}`}>
     <HeaderContainer visible={show}>
       <HeaderInnerContainer>
 

@@ -54,6 +54,8 @@ export default function Hero({ images }) {
               alt="banner image"
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 100vw, 66vw"
               loading="eager"
+              placeholder='blur'
+              blurDataURL={`/_next/image?url=${image.attributes.hero_image_lrg.data.attributes.url}&w=16&q=1`}
               fill
               style={{maxWidth: "100%", objectFit: "cover",}}
             />

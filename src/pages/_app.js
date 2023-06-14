@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import 'normalize.css';
-import '@/layout/styles/globalStyles.css';
+import '@/styles/globalStyles.css';
 import { ThemeProvider } from 'styled-components';
-import { globals } from '@/layout/styles/StyledTheme';
+import { globals } from '@/styles/StyledTheme';
 import Layout from '@/components/layout/components/Layout';
 import { DefaultSeo } from 'next-seo';
 
@@ -14,7 +14,6 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        {/* <title>{`Doc Sprocket | ${Component.title}`}</title> */}
         <meta name="description" content="Built by House of Sprocqué" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

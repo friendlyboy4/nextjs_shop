@@ -4,7 +4,7 @@ const Container = styled.div`
   width: 100%;
   max-width: ${props => props.theme.layout.contentWidth};
   margin: 2rem auto 8rem;  
-  font-family: 'Jost', sans-serif;
+  font-family: ${props => props.theme.fonts.fontFamily};
   color: ${props => props.theme.fonts.fontColor};
   font-size: 1rem;
   line-height: 1.5;

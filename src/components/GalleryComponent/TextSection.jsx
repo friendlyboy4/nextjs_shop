@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const TextSectionContainer = styled.div`
-  font-family: 'Jost', sans-serif;
+  font-family: ${props => props.theme.fonts.fontFamily};
   color: ${props => props.theme.fonts.fontColor};
   font-size: 1rem;
   @media (max-width: 1200px) {

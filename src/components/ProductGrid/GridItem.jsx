@@ -59,7 +59,7 @@ const GridTextContainer = styled.div`
   padding: 0 1rem 0 0;
   display: flex;
   flex-direction: column;
-  font-family: 'League Spartan', sans-serif;
+  font-family: ${props => props.theme.fonts.fontFamily};
   @media (max-width: 768px) and (min-width: 480px) {
     ${props => props.frontpage && 
       'flex: 1;'
@@ -91,7 +91,7 @@ const GridPrice = styled.p`
   background-color: #ffd700;
   border-radius: 5px;
   box-shadow: 1px 1px 2px #00000033;
-  font-size: 1.6em;
+  font-size: 1.5em;
   font-weight: bold;
   margin: .4em 0;
 
@@ -113,6 +113,8 @@ export default function GridItem({ bike, frontpage, custom }) {
         <Image
           src={images.data[0].attributes.url}
           alt={title}
+          placeholder="blur"
+          blurDataURL={`/_next/image?url=${images.data[0].attributes.url}&w=16&q=1`}
           fill
           sizes={
             frontpage ? (

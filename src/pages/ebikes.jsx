@@ -35,12 +35,13 @@ export default function Ebikes({ images }) {
     >
       <NextSeo 
         title="The E-Mu electric bike - Made for Sydney"
-        description=""
+        description="Check out the E-Mu urban commuter. Made just for you"
       />
       <PageHeadingComponent 
         text='e-bikes'
         imgSrc={images.attributes.hero_img_lrg.data.attributes.url}
         imgAlt='image of E-Mu ebike'
+        imgThumbnail={images.attributes.hero_img_lrg.data.attributes.formats.thumbnail.url}
       />
       <CopyBox>
         <p>

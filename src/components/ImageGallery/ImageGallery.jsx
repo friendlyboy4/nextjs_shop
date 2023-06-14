@@ -24,6 +24,8 @@ export default function ImageGallery({ images }) {
           <Image 
             src={image.attributes.url}
             alt='image of bike'
+            placeholder="blur"
+            blurDataURL={`/_next/image?url=${image.attributes.url}&w=16&q=1`}
             sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 100vw, 66vw"
             fill
             style={{objectFit: 'cover', borderRadius: '10px'}}

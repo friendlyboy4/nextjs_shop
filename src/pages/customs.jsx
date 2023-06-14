@@ -28,6 +28,7 @@ export default function Customs({ customs, hero }) {
         text='customs'
         imgSrc={hero.attributes.hero_img_lrg.data.attributes.url}
         imgAlt='image of Doc Sprocket workbench'
+        imgThumbnail={hero.attributes.hero_img_lrg.data.attributes.formats.thumbnail.url}
       />
       <CopyBox>
         <p>

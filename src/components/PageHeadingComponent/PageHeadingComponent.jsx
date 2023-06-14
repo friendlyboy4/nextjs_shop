@@ -42,7 +42,7 @@ const MainHeadingText = styled.h1`
 `
 
 
-export default function PageHeadingComponent({text, imgSrc, imgAlt, }) {
+export default function PageHeadingComponent({text, imgSrc, imgThumbnail, imgAlt, }) {
   return (
     <HeroContainer>
       <MainHeadingBox>
@@ -53,6 +53,8 @@ export default function PageHeadingComponent({text, imgSrc, imgAlt, }) {
         alt={imgAlt}
         fill
         loading = 'eager'
+        placeholder='blur'
+        blurDataURL={`/_next/image?url=${imgSrc}&w=16&q=1`}
         sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 100vw, 66vw"
         style={{
           objectFit: 'cover', 

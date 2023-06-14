@@ -6,7 +6,6 @@ const GhostBurgerBox = styled.div`
   height: 2.4rem;
   @media (max-width: 768px) {
     display: block;
-    /* background-color: purple; */
   }
 `
 

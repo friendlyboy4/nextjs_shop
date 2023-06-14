@@ -15,6 +15,10 @@ export default function About() {
   // /new_site/nextjs_shop
   return (
     <FadeBox showContent={pageOpen}>
+      <NextSeo 
+        title="About Doc Sprocket"
+        description="Doc Sprocket was started in 2021. It's gone well so far."   
+      />
       <CopyBox>
         Hi, my name is Joel. I opened Doc Sprocket Cycle Workshop in 2021 after doing the rounds in various Sydney shops. 
       </CopyBox>  

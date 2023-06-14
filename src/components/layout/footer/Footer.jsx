@@ -1,245 +1,220 @@
-// export default function Footer() {
-//   return (
-//     <h1>This is a test footer!!!</h1>
-//   )
-// }
-
-import styled from 'styled-components';
+import styled from "styled-components";
+import Link from "next/link";
 import { 
-  FaPhoneAlt, 
-  FaEnvelope, 
-  FaMapMarkerAlt,
   FaInstagram,
-  FaFacebook
+  FaFacebookSquare
 } from 'react-icons/fa'
 
-// import { Headline } from '../layout/typefaces';
 
-
-const FooterContainer = styled.footer`
-  position: relative;
-  display: flex;
-  flex-direction: column;  
-  border-top: 3px solid ${props => props.theme.colors.footerColorDark};
-  width: 100%;
-  background-color: ${props => props.theme.colors.footerColor};
-  z-index: 9997;
-  bottom: 0;
-  padding: 2rem 0 0; 
-  color: #ffffffee;
-  /* scroll-snap-align: end; */
-  & a {
-    color: #ffffffee;
-  }
-  @media (max-width: 480px) {
-    padding: 1rem 0 0;
-  }
-`
-
-const CopyrightContainer = styled.div`
-  font-size: 1.6rem;
-  padding-bottom: 10px;
-  margin: 0 auto;
-  @media (max-width: 480px) {
-    padding-bottom: 6px;
-  }
-`
-
-const CopyrightText = styled.div`
-  display: flex;
-  font-size: 1.2rem;
-  text-align: justify;
-  text-justify: inter-word;
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-  @media (max-width: 480px) {
-    flex-direction: column;
-    line-height: 1.6;
-  }
-`
-
-const InfoContainer = styled.div`
-  display: flex;
-  font-size: 2rem;
-  line-height: 2;
-  font-family: ${props => props.theme.fonts.fontFamily};
-  font-weight: 400;
-  text-align: justify;
-  text-justify: inter-word;
-  margin-bottom: 3rem;
-  padding: 0 3rem;
-  @media (max-width: 1200px) {
-    font-size: 1.8rem;
-    
-  }
-  @media (max-width: 768px) {
-    font-size: 1.6rem;
-    justify-content: space-between;    
-  }
-  @media (max-width: 640px) {
-    flex-direction: column;
-  }
-  @media (max-width: 480px) {
-    padding: 0 2rem;
-  }
-`
-
-const ContactContainer = styled.div`
+const FooterBlock = styled.div`
+  border-top: 1px solid #00000011;
+  padding: 8rem 0 2rem 0;
   display: flex;
   flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  ${props => props.fade && 'opacity: 0.6'};
+  @media (max-width: 768px) {
+    padding: 6rem 0 1.5rem 0; 
+    font-size: 1.4rem;
+  }
+
+`
+
+const FooterContainer = styled.div`
+  margin: 0 2rem;
+  display: flex;
   justify-content: space-between;
-  @media (min-width: 768px) {
-    margin-right: 10rem; 
+  font-family: ${props => props.theme.fonts.fontFamily};
+  color: #333333;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  @media (max-width: 768px) {
+    margin: 0 1rem;
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+  @media (min-width: 1320px) {
+    width: 1200px;
+    margin: 0 auto;
   }
 `
-const ContactDetails = styled.div`
 
-`
-const ContactLink = styled.a`
-  text-decoration: underline;
-  display: flex;
-  align-items: center;
-  line-height: 3;
-  cursor: pointer;
-  z-index: 9999;
-`
-const OpeningHoursContainer = styled.div`
-  display: flex;
-  line-height: 2.4;
+const FooterCopyrightContainer = styled.div`
+  width: 100%;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #666666;
+  border-top: 1px solid #00000022;
 `
 
-const OpeningHoursWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+const LinkStyled = styled(Link)`
+  width: fit-content;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+
+  :hover {
+    color: goldenrod;
+  }
 `
 
-const PhoneIcon = styled(FaPhoneAlt)`
-  margin-right: 1rem;
-`
-
-const EmailIcon = styled(FaEnvelope)`
-  margin-right: 1rem;
-`
-
-const AddressIcon = styled(FaMapMarkerAlt)`
-  margin-right: 1rem;
-`
-
-const DaysList = styled.ul`
-  margin: 0 5rem 0 0;
-  list-style-type: none;
-  padding-left: 0;
-`
-
-const TimesList = styled.ul`
-  margin: 0 5rem 0 0;
-  list-style-type: none;
-  padding-left: 0;
-`
-
-const SocialsContainer = styled.div`
-  display: flex;
-  margin: 1rem 0;
-`
-const SocialMediaContact = styled.a`
-  background-color: white;
-  margin: 0 1rem 0 0;
-  font-size: 2rem;
-  border: black 2px solid;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 2px 2px 3px #11111166;
-`
-
-const FBIcon = styled(FaFacebook)`
-  margin: 1.3rem 1.3rem 0.3rem;
-  color: #222222;
-`
-const FooterHeading = styled.h3`
-  font-size: 2.4rem;
+const LinkStyledDSCW = styled.p`
   margin: 0;
-  @media (max-width: 640px) {
-    font-size: 2rem;
-  }
+`
+
+const FooterSocialsLogosContainer = styled.div`
+  display: flex; 
+  font-size: 3rem;
 `
 
 const InstaIcon = styled(FaInstagram)`
-  margin: 1.3rem 1.3rem 0.3rem;
-  color: #222222;
-`
-
-const Footbox = styled.div`
-  bottom: 1px;
-  position: absolute;
-  visibility: hidden;
-  height: calc(100vh - 8rem);
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  @media (max-width: 768px) {
-    height: calc(100vh - 6rem);
+  margin: 1.65rem 1.65rem 0 -.2rem;
+  color: #777777;
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+  :hover {
+    color: #bbbbbb;
   }
 `
 
-export default function Footer() {
-  return (
-    <FooterContainer id="contact">
-      
-      <InfoContainer>
-        <ContactContainer>
-          <ContactDetails>
-            <FooterHeading>Get in touch...</FooterHeading>
-            <ContactLink href="tel: +61450519496">
-              <PhoneIcon/>0450 519 496
-            </ContactLink>
-            <ContactLink href="mailto:info@docsprocket.com.au">
-              <EmailIcon/>info@docsprocket.com.au
-            </ContactLink>
-            <ContactLink href="https://g.page/doc-sprocket-cycle-workshop?share">
-              <AddressIcon/>555A King Street Newtown NSW 2042
-            </ContactLink>
-          </ContactDetails>
-          <SocialsContainer>
-            <SocialMediaContact href="https://www.instagram.com/docsprocketnewtown/">
-              <InstaIcon/>
-            </SocialMediaContact>
-            <SocialMediaContact href="https://www.facebook.com/docsprocketnewtown/">
-              <FBIcon/>
-            </SocialMediaContact>
-          </SocialsContainer>
-        </ContactContainer>
-        <OpeningHoursWrapper>
-        <FooterHeading>Opening hours:</FooterHeading>
-        <OpeningHoursContainer>
-          <DaysList>
-            <li>Monday</li>
-            <li>Tuesday</li>
-            <li>Wednesday</li>
-            <li>Thursday</li>
-            <li>Friday</li>
-            <li>Saturday</li>
-            <li>Sunday</li>
-          </DaysList>
-          <TimesList>
-            <li>closed</li>
-            <li>10:00 &nbsp;-&nbsp; 17:30</li>
-            <li>10:00 &nbsp;-&nbsp; 17:30</li>
-            <li>10:00 &nbsp;-&nbsp; 17:30</li>
-            <li>10:00 &nbsp;-&nbsp; 17:30</li>
-            <li>11:00 &nbsp;-&nbsp; 16:00</li>
-            <li>closed</li>
-          </TimesList>
-        </OpeningHoursContainer>
-        </OpeningHoursWrapper>
-      </InfoContainer>
+const FBIcon = styled(FaFacebookSquare)`
+  margin: 1.65rem 1.65rem 0 -.2rem;
+  color: #777777;
+  border-radius: 12px;
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+  :hover {
+    color: #bbbbbb;
+  }
+`
 
-      <CopyrightContainer>
-        <CopyrightText>
-          <p>© Doc Sprocket Cycle Workshop {new Date().getFullYear()} &middot; </p>
-          <p>Built with <a href="https://nextjs.org/">NextJS</a> by House of Sprocqué</p>
-        </CopyrightText>
-      </CopyrightContainer>
-    </FooterContainer>
+const FooterColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  line-height: 2.2;
+  @media (max-width: 700px) {
+    line-height: 2.4; 
+  }
+`
+
+const FooterContactSection = styled(FooterColumn)`
+  flex: 3 0 0;
+  min-width: 36rem;
+  @media (max-width: 600px) {
+    min-width: 30rem;
+  }
+`
+
+const FooterNavSection = styled(FooterColumn)`
+  flex: 1 0 0;
+  min-width: 16rem;
+  @media (max-width: 480px) {
+    margin-top: 1rem;
+    padding-top: 2.2rem;
+    border-top: 1px solid #00000033;
+  }
+`
+
+const FooterOpeningHoursSection = styled(FooterColumn)`
+  flex-direction: row;
+  p {
+    margin: 0;
+  }
+  @media (max-width: 480px) {
+    margin-top: 3rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid #00000033;
+  }
+`
+
+const Days = styled(FooterColumn)`
+  margin-right: 8rem;
+  flex-shrink: 0;
+  @media (max-width: 1200px) {
+    margin-right: 4vw;
+  }
+`
+
+const Times = styled(FooterColumn)`
+  flex: 1 0;
+`
+
+export default function Footer({ fade }) {
+  return (
+    <FooterBlock
+      fade={fade}
+    >
+      <FooterContainer>
+        <FooterContactSection>
+          <LinkStyledDSCW>Doc Sprocket Cycle Workshop</LinkStyledDSCW>
+          <LinkStyled rel="noopener noreferrer" target="_blank" href="https://g.page/doc-sprocket-cycle-workshop?share">555A King St Newtown NSW 2042</LinkStyled>
+          <LinkStyled rel="noopener noreferrer" target="_blank" href="mailto:info@docsprocket.com.au">info@docsprocket.com.au</LinkStyled>
+          <LinkStyled rel="noopener noreferrer" target="_blank" href="tel: +61450519496">0450 519 496</LinkStyled>
+          <FooterSocialsLogosContainer>
+            <Link rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/docsprocketnewtown/"><InstaIcon /></Link>
+            <Link rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/docsprocketnewtown/"><FBIcon /></Link>
+          </FooterSocialsLogosContainer>
+        </FooterContactSection>
+        <FooterNavSection>
+          <LinkStyled href="/">Home</LinkStyled>
+          <LinkStyled href="/bikes">Bikes</LinkStyled>
+          <LinkStyled href="/workshop">Workshop</LinkStyled>
+          <LinkStyled href="/customs">Customs</LinkStyled>
+          <LinkStyled href="/ebikes">eBikes</LinkStyled>
+          <LinkStyled href="/about">About</LinkStyled>
+        </FooterNavSection>
+        <FooterOpeningHoursSection>
+          <Days>
+            <p>mon</p>
+            <p>tue</p>
+            <p>wed</p>
+            <p>thu</p>
+            <p>fri</p>
+            <p>sat</p>
+            <p>sun</p>
+          </Days>
+          <Times>
+            <p>x</p>
+            <p>10 - 17.30</p>
+            <p>10 - 17.30</p>
+            <p>10 - 17.30</p>
+            <p>10 - 17.30</p>
+            <p>11 - 16.00</p>
+            <p>x</p>
+          </Times>
+        </FooterOpeningHoursSection>
+        <FooterCopyrightContainer>
+          &copy; DSCW 2023 | Built with&nbsp;
+          <Link 
+            style={{color: 'inherit'}}
+            rel="noopener noreferrer" 
+            target="_blank" 
+            href="https://nextjs.org/"
+          >
+            NextJS
+          </Link> by House of Sprocqu&eacute; 
+        </FooterCopyrightContainer>
+      </FooterContainer>
+      
+    </FooterBlock>
   )
 }
+
+// CONTACT COLUMN
+// logo
+// address
+// phone
+// email
+// insta
+// fb
+
+// NAV COLUMN
+// Home
+// About
+// Bikes
+// Workshop
+// ebikes
+// customs

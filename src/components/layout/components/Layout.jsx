@@ -1,7 +1,7 @@
-import Header from "@/components/layout/header/HeaderMaster/Header";
+import Header from "@/components/layout/header/Header";
 import ContentContainer from "@/components/layout/components/ContentContainer";
 import MainContainer from "@/components/layout/components/MainContainer";
-import FooterNew from "@/components/layout/footer/FooterNew";
+import Footer from "@/components/layout/footer/Footer";
 
 import { useState } from "react";
 
@@ -38,7 +38,7 @@ export default function Layout({ children }) {
       >
         { children }
       </ContentContainer>
-      <FooterNew fade={navbarIsOpen} />
+      <Footer fade={navbarIsOpen} />
     </MainContainer>
     </>
   )

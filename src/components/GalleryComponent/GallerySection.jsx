@@ -82,6 +82,8 @@ export default function GallerySection({ images, alt }) {
             <Image 
               src={image.attributes.url} 
               alt={alt}
+              placeholder='blur'
+              blurDataURL={`/_next/image?url=${image.attributes.url}&w=16&q=1`} 
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 40vw"
               fill 
               style={{objectFit: 'cover'}}

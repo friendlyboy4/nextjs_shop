@@ -31,6 +31,7 @@ export default function Bikes({ bikes, hero }) {
         text="bikes"
         imgSrc={hero.attributes.hero_img_lrg.data.attributes.url}
         imgAlt="banner image for bikes page"
+        imgThumbnail={hero.attributes.hero_img_lrg.data.attributes.formats.thumbnail.url}
       />
       <CopyBox>
         <p>

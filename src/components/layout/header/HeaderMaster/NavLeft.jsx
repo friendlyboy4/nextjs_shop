@@ -5,7 +5,6 @@ const HeaderLeftContainer = styled.div`
   display: flex;
   flex: 3;
   justify-content: flex-start;
-  /* line-height: 1; */
   @media (max-width: 768px) {
     flex: 0;
     font-weight: 500;
@@ -38,11 +37,17 @@ const NavEl = styled.li`
   font-size: 2.6em;
   padding: .8em 0 .8em 0;
   transition: color 0.3s ease;
+  @media (max-width: 1000px) {
+    font-size: 2.4em;
+  }
   @media (min-width: 768px) {
     padding: 0 1.75vw;
   }
   @media (max-width: 768px) {
     border-bottom: 1px solid #00000011; 
+  }
+  @media (max-width: 480px) {
+    font-size: 2.6em;
   }
   :hover {
     color: goldenrod;
@@ -94,7 +99,7 @@ export default function NavLeft({ navbarClose }) {
             onClick={navbarClose}  
           >
             <NavEl>
-              E-Bikes
+              E&#x2011;Bikes
             </NavEl>
           </LinkStyled>
 

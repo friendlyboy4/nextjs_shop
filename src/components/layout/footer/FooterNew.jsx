@@ -149,7 +149,7 @@ export default function FooterNew({ fade }) {
       fade={fade}
     >
       <FooterContainer>
-        <FooterContactSection>
+        <FooterContactSection id="contact">
           <LinkStyledDSCW>Doc Sprocket Cycle Workshop</LinkStyledDSCW>
           <LinkStyled rel="noopener noreferrer" target="_blank" href="https://g.page/doc-sprocket-cycle-workshop?share">555A King St Newtown NSW 2042</LinkStyled>
           <LinkStyled rel="noopener noreferrer" target="_blank" href="mailto:info@docsprocket.com.au">info@docsprocket.com.au</LinkStyled>
@@ -187,7 +187,7 @@ export default function FooterNew({ fade }) {
             <p>x</p>
           </Times>
         </FooterOpeningHoursSection>
-        <FooterCopyrightContainer id="contact">
+        <FooterCopyrightContainer>
           &copy; DSCW 2023 | Built with&nbsp;
           <Link 
             style={{color: 'inherit'}}

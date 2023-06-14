@@ -6,7 +6,7 @@ export const globals = {
     fontFamily: "'Lexend Deca', sans-serif",
   },
   colors: {
-    headerBGColor: '#ffffffaa',
+    headerBGColor: '#ffffffcc',
     headerBlur: 'blur(5px)',
     headerFontColor: '#333333',
     footerColorDark: '#000000',

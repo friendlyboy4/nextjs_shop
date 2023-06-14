@@ -47,6 +47,9 @@ const TextItem = styled.div`
   font-size: 2.2em;
   color: ${props => props.theme.colors.headerFontColor};
   transition: color 0.3s ease;
+  @media (max-width: 1000px) and (min-width: 768px) {
+    font-size: 2em; 
+  }
   @media (max-width: 768px) {
     padding: 0 4rem 0 0;
     padding-bottom: 2rem;

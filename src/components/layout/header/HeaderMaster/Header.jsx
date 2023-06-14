@@ -13,9 +13,11 @@ const HeaderContainer = styled.header`
   position: sticky;
   top: 0;
   z-index: 99;
-  padding: 0 1rem 0 0;
+  /* padding: 0 1rem 0 0; */
+  padding: 0;
   background-color: ${props => props.theme.colors.headerBGColor};
   backdrop-filter: ${props => props.theme.colors.headerBlur};
+  -webkit-backdrop-filter: ${props => props.theme.colors.headerBlur};
   filter: drop-shadow(2px 2px 5px #00000011);
   width: 100%;
   font-size: 1rem;
@@ -26,15 +28,18 @@ const HeaderContainer = styled.header`
   @media (min-width: 768px) and (max-width: 1000px) {
     font-size: 0.8rem;
   }
-  @media (max-width: 480px) {
+  /* @media (max-width: 480px) {
     font-size: 0.7rem; 
-  }
+  } */
 `
 const HeaderInnerContainer = styled.div`
   max-width: ${props => props.theme.layout.contentWidth};
   padding: 1.6rem 0;
   display: flex;
   margin: 0 auto;
+  @media (min-width: 768px) and (max-width: 1260px) {
+    padding: 1.6rem 2rem;
+  }
   @media (max-width: 768px) {
     justify-content: space-between;
   }
@@ -44,9 +49,11 @@ const HeaderContentContainer = styled.div`
   display: flex;
   flex: 1;
   justify-content: space-between;
+  z-index: 1;
   @media (max-width: 768px) {
     background-color: ${props => props.theme.colors.headerBGColor};
     backdrop-filter: ${props => props.theme.colors.headerBlur};
+    -webkit-backdrop-filter: ${props => props.theme.colors.headerBlur};
     position: fixed;
     padding-left: 1rem;
     top: 6.8rem;
@@ -76,7 +83,6 @@ export default function Header({ navbarChange, navbarIsOpen, navbarClose }) {
 
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
-      // if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
       if (window.scrollY < lastScrollY || window.scrollY < 50) {
         setShow(true);
       } else {

@@ -3,6 +3,8 @@ html {
   box-sizing: border-box;
   height: 100%;
   scroll-behavior: smooth !important;
+  /* IMPORTANT BELOW */
+  scrollbar-gutter: stable;
 }
 
 *, *:before, *:after {

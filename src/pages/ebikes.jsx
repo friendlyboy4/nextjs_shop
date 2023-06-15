@@ -55,7 +55,7 @@ export default function Ebikes({ images }) {
           For peace of mind, the E-Mu comes standard with two years of free servicing, 
           as well as a two year warranty on mechnical and electrical parts. 
           <br/><br/>
-          To learn more, please get in touch or visit the dedicated <A target="_blank" rel="noreferrer" href="https://e-mu.au">website for the E-Mu</A> where 
+          To learn more, please get in touch or visit the dedicated <A target="_blank" rel="noreferrer" aria-label="Read more about the E-Mu electric bike here" href="https://e-mu.au">website for the E-Mu</A> where 
           you can find more information and images, or book yourself a test ride. 
         </p>
       </CopyBox>

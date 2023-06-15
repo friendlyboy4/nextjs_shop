@@ -41,6 +41,7 @@ export default function Hamburger({ navbarChange, navbarIsOpen }) {
       onClick={navbarChange}
       onKeyDown={navbarChange}
       role="button"
+      aria-label="button to show navbar"
       tabIndex="0"
     >
       <Bar1 className={`${navbarIsOpen ? "active" : ""}`}/>

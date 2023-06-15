@@ -66,41 +66,41 @@ export default function NavLeft({ navbarClose }) {
 
         <NavList>
 
-          <LinkStyled 
-            href="/bikes"
-            onClick={navbarClose}
-          >
-            <NavEl>
+          <NavEl>
+            <LinkStyled 
+              href="/bikes"
+              onClick={navbarClose}
+            >
               Bikes
-            </NavEl>
-          </LinkStyled>
+            </LinkStyled>
+          </NavEl>
 
-          <LinkStyled 
-            href="/workshop"
-            onClick={navbarClose}
-          >
-            <NavEl>
+          <NavEl>
+            <LinkStyled 
+              href="/workshop"
+              onClick={navbarClose}
+            >
               Workshop
-            </NavEl>
-          </LinkStyled>
-
-          <LinkStyled 
-            href="/customs"
-            onClick={navbarClose}
-          >
-            <NavEl>
+            </LinkStyled>
+          </NavEl>
+          
+          <NavEl>
+            <LinkStyled 
+              href="/customs"
+              onClick={navbarClose}
+            >
               Customs
-            </NavEl>
-          </LinkStyled>
+            </LinkStyled>
+          </NavEl>
 
-          <LinkStyled 
-            href="/ebikes"
-            onClick={navbarClose}  
-          >
-            <NavEl>
+          <NavEl>
+            <LinkStyled 
+              href="/ebikes"
+              onClick={navbarClose}  
+            >              
               E&#x2011;Bikes
-            </NavEl>
-          </LinkStyled>
+            </LinkStyled>
+          </NavEl>
 
         </NavList>
 

@@ -150,12 +150,12 @@ export default function Footer({ fade }) {
       <FooterContainer>
         <FooterContactSection>
           <LinkStyledDSCW>Doc Sprocket Cycle Workshop</LinkStyledDSCW>
-          <LinkStyled rel="noopener noreferrer" target="_blank" href="https://g.page/doc-sprocket-cycle-workshop?share">555A King St Newtown NSW 2042</LinkStyled>
-          <LinkStyled rel="noopener noreferrer" target="_blank" href="mailto:info@docsprocket.com.au">info@docsprocket.com.au</LinkStyled>
-          <LinkStyled rel="noopener noreferrer" target="_blank" href="tel: +61450519496">0450 519 496</LinkStyled>
+          <LinkStyled rel="noopener noreferrer" target="_blank" aria-label="Link to Doc Sprocket Google Maps entry" href="https://g.page/doc-sprocket-cycle-workshop?share">555A King St Newtown NSW 2042</LinkStyled>
+          <LinkStyled rel="noopener noreferrer" target="_blank" aria-label="Link to send an email to Doc Sprocket" href="mailto:info@docsprocket.com.au">info@docsprocket.com.au</LinkStyled>
+          <LinkStyled rel="noopener noreferrer" target="_blank" aria-label="Link to call Doc Sprocket" href="tel: +61450519496">0450 519 496</LinkStyled>
           <FooterSocialsLogosContainer>
-            <Link rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/docsprocketnewtown/"><InstaIcon /></Link>
-            <Link rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/docsprocketnewtown/"><FBIcon /></Link>
+            <Link rel="noopener noreferrer" target="_blank" aria-label="Link to Doc Sprocket Instagram page" href="https://www.instagram.com/docsprocketnewtown/"><InstaIcon /></Link>
+            <Link rel="noopener noreferrer" target="_blank" aria-label="Link to Doc Sprocket Facebook page" href="https://www.facebook.com/docsprocketnewtown/"><FBIcon /></Link>
           </FooterSocialsLogosContainer>
         </FooterContactSection>
         <FooterNavSection>

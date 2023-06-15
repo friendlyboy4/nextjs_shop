@@ -125,9 +125,9 @@ export default function Workshop({ images }) {
 
       <Copy>
         If you are looking for <b>electrical</b> repairs, we are always happy to take a look, 
-        but otherwise recommend <A target="_blank" rel="noreferrer" href="https://www.glowwormbicycles.com.au">Glow Worm Bicycles</A> in Marrickville. Their friendly and experienced staff are very knowledgeable in all areas of electric bike servicing and repair. 
-        We will happily and confidently service road bikes, but for the really fancy stuff you could also contact <A target="_blank" rel="noreferrer" href="https://vanillacycles.com">Vanilla Cycles</A> in Marrickville. 
-        If you are looking to get wheels built from scratch, we recommend <A target="_blank" rel="noreferrer" href="https://www.omafiets.com.au">Omafiets</A> in Alexandria, who can also help with any matters related to cycle touring, rack mounts, frame bags and the like. 
+        but otherwise recommend <A target="_blank" rel="noreferrer" aria-label="Link to website of Glow Worm bike shop in Sydney" href="https://www.glowwormbicycles.com.au">Glow Worm Bicycles</A> in Marrickville. Their friendly and experienced staff are very knowledgeable in all areas of electric bike servicing and repair. 
+        We will happily and confidently service road bikes, but for the really fancy stuff you could also contact <A target="_blank" rel="noreferrer" aria-label="Link to website of Vanilla Cycles bike shop in Sydney" href="https://vanillacycles.com">Vanilla Cycles</A> in Marrickville. 
+        If you are looking to get wheels built from scratch, we recommend <A target="_blank" rel="noreferrer" aria-label="Link to website of Omafiets bike shop in Sydney" href="https://www.omafiets.com.au">Omafiets</A> in Alexandria, who can also help with any matters related to cycle touring, rack mounts, frame bags and the like. 
       </Copy>
 
       <HR />

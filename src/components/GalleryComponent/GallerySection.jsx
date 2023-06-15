@@ -103,7 +103,7 @@ export default function GallerySection({ images, alt }) {
             <ThumbnailContainer key={image.id}>
               <Image 
                 src={image.attributes.formats.thumbnail.url} 
-                alt='bianchi'
+                alt={alt}
                 sizes="(max-width: 1920px) 125px"
                 fill 
                 style={{objectFit: 'cover', objectPosition: 'center'}}

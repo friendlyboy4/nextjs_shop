@@ -6,10 +6,6 @@ import { globals } from '@/styles/StyledTheme';
 import Layout from '@/components/layout/components/Layout';
 import { DefaultSeo } from 'next-seo';
 
-const SEO = {
-  titleTemplate: 'Doc Sprocket | %s'
-}
-
 export default function App({ Component, pageProps }) {
   return (
     <>

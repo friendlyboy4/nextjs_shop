@@ -1,6 +1,7 @@
-import styled from "styled-components";
+// import styled from "styled-components";
 import FadeBox from "@/components/layout/components/FadeBox";
 import CopyBox from "@/components/CopyBox/CopyBox";
+import { NextSeo } from "next-seo";
 import { useState, useEffect } from "react";
 
 export default function About() {
@@ -12,7 +13,6 @@ export default function About() {
       setPageOpen(false)
     }
   }, [])
-  // /new_site/nextjs_shop
   return (
     <FadeBox showContent={pageOpen}>
       <NextSeo 

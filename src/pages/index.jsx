@@ -56,11 +56,11 @@ export default function Home({ bikes, customs, hero, ebikeBanner, workshopBanner
 }
 
 export async function getStaticProps() {
-  const resBikes = await fetchAPI("/used-bikes?populate=*")
-  const resCustoms = await fetchAPI("/custom-bikes?populate=*")
-  const resHero = await fetchAPI("/heroes?populate=*")
-  const resEbikeBanner = await fetchAPI("/ebikes-banner?populate=*")
-  const resWorkshopBanner = await fetchAPI("/workshop-banner?populate=*")
+  const resBikes = await fetchAPI("/used-bikes?populate=*", {}, {cache: 'force-cache'})
+  const resCustoms = await fetchAPI("/custom-bikes?populate=*", {}, {cache: 'force-cache'})
+  const resHero = await fetchAPI("/heroes?populate=*", {}, {cache: 'force-cache'})
+  const resEbikeBanner = await fetchAPI("/ebikes-banner?populate=*", {}, {cache: 'force-cache'})
+  const resWorkshopBanner = await fetchAPI("/workshop-banner?populate=*", {}, {cache: 'force-cache'})
   return {
     props: {
       bikes: resBikes.data,
@@ -69,6 +69,6 @@ export async function getStaticProps() {
       ebikeBanner: resEbikeBanner.data,
       workshopBanner: resWorkshopBanner.data,
     },
-    revalidate: 1,
+    // revalidate: 1,
   }
 }

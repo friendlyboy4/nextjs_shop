@@ -48,15 +48,14 @@ export default function Customs({ customs, hero }) {
 }
 
 export async function getStaticProps() {
-  const resCustoms = await fetchAPI("/custom-bikes?populate=*")
-  const resHero = await fetchAPI("/customs-page?populate=*")
+  const resCustoms = await fetchAPI("/custom-bikes?populate=*", {}, {cache: 'force-cache'})
+  const resHero = await fetchAPI("/customs-page?populate=*", {}, {cache: 'force-cache'})
   return {
     props: {
       customs: resCustoms.data,
       hero: resHero.data,
-
     },
-    revalidate: 1,
+    // revalidate: 1,
   }
 }
 

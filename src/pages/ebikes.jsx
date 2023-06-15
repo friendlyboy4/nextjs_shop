@@ -64,11 +64,12 @@ export default function Ebikes({ images }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetchAPI("/ebikes-page?populate=*")
+  const res = await fetchAPI("/ebikes-page?populate=*", {}, {cache: 'force-cache'})
   return {
     props: {
       images: res.data,
     },
-    revalidate: 1,
+    // revalidate: 1,
+    
   }
 }

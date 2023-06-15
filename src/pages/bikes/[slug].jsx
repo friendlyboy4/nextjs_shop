@@ -28,11 +28,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetchAPI(`/used-bike/${params.slug}?populate[images][populate]=*`)
+  const res = await fetchAPI(`/used-bike/${params.slug}?populate[images][populate]=*`, {}, {cache: 'force-cache'})
   return {
     props: {
       bike: res.data
-    }
+    },
+    // cache: 'force-cache',
   }
 }
 

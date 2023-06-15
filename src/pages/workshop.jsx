@@ -150,11 +150,11 @@ export default function Workshop({ images }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetchAPI("/workshop-page?populate=*")
+  const res = await fetchAPI("/workshop-page?populate=*", {}, {cache: 'force-cache'})
   return {
     props: {
       images: res.data,
     },
-    revalidate: 1,
+    // revalidate: 1, 
   }
 }

@@ -53,13 +53,13 @@ export default function Bikes({ bikes, hero }) {
 }
 
 export async function getStaticProps() {
-  const resBikes = await fetchAPI("/used-bikes?populate=*")
+  const resBikes = await fetchAPI("/used-bikes?populate=*", {}, {cache: 'force-cache'})
   const resHero = await fetchAPI("/bikes-page?populate=*")
   return {
     props: {
       bikes: resBikes.data,
       hero: resHero.data,
     },
-    revalidate: 1,
+    // revalidate: 1,
   }
 }

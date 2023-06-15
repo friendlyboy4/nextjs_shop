@@ -10,7 +10,7 @@ const Container = styled.div`
   line-height: 1.5;
   opacity: 1;
   transition: opacity 0.3s ease;
-  ${props => props.fade && 'opacity: 0.6; pointer-events: none'};
+  ${props => props.fade && 'opacity: 0.7; pointer-events: none'};
   @media (max-width: 768px) {
     font-size: .9rem; 
   }

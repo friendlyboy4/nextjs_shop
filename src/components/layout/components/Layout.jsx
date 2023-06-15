@@ -1,4 +1,5 @@
 import Header from "@/components/layout/header/Header";
+import HeaderPane from "../header/HeaderPane";
 import ContentContainer from "@/components/layout/components/ContentContainer";
 import MainContainer from "@/components/layout/components/MainContainer";
 import Footer from "@/components/layout/footer/Footer";
@@ -26,10 +27,13 @@ export default function Layout({ children }) {
   return (
     <>
     <Header 
-        navbarChange={navbarHandler}
-        navbarIsOpen={navbarIsOpen}
-        navbarClose={closeNavMenu}
-      />
+      navbarChange={navbarHandler}
+      navbarIsOpen={navbarIsOpen}
+      navbarClose={closeNavMenu}
+    />
+    <HeaderPane 
+      active={navbarIsOpen} 
+    />
     <MainContainer
       closeNavMenu={closeNavMenu}
     >

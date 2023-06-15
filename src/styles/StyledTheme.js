@@ -6,7 +6,7 @@ export const globals = {
     fontFamily: "'Jost', sans-serif",
   },
   colors: {
-    headerBGColor: '#ffffffcc',
+    headerBGColor: '#ffffffaa',
     headerBlur: 'blur(5px)',
     headerFontColor: '#333333',
     footerColorDark: '#000000',

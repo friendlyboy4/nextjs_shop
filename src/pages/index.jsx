@@ -36,7 +36,7 @@ export default function Home({ bikes, customs, hero, ebikeBanner, workshopBanner
       />
       <ProductGrid
         products={bikes}
-        frontpage={true}
+        frontpage={+true}
       />
       <BannerContainer
         banner1={ebikeBanner}
@@ -48,7 +48,7 @@ export default function Home({ bikes, customs, hero, ebikeBanner, workshopBanner
       />
       <ProductGrid
         products={customs}
-        frontpage={true}
+        frontpage={+true}
         custom={true}
       />
     </FadeBox>

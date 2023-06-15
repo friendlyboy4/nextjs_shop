@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import BannerItem from "./BannerItem";
-import blurGenerator from "@/api/blurGenerator";
 
 const BannerContainerStyled = styled.div`
   width: 100%;

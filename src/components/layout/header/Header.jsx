@@ -45,11 +45,9 @@ const HeaderContentContainer = styled.div`
   display: flex;
   flex: 1;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 9999;
   @media (max-width: 768px) {
     background-color: ${props => props.theme.colors.headerBGColor};
-    backdrop-filter: ${props => props.theme.colors.headerBlur};
-    -webkit-backdrop-filter: ${props => props.theme.colors.headerBlur};
     position: fixed;
     padding-left: 1rem;
     top: 6.8rem;
@@ -57,10 +55,10 @@ const HeaderContentContainer = styled.div`
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
-    border-right: 1px solid #eeeeee;
+    border-right: 1px solid #ffffff;
     transform: translateX(-110%);
     -webkit-transform: translateX(-110%);
-    transition: transform .3s ease, opacity .2s ease;
+    transition: transform .3s ease, opacity .3s ease;
     opacity: 0;
     &.active {
       opacity: 1;
@@ -108,7 +106,6 @@ export default function Header({ navbarChange, navbarIsOpen, navbarClose }) {
         />
 
         <HeaderLogo />
-
         <HeaderContentContainer
           className={`${navbarIsOpen ? "active" : ""}`}
         >

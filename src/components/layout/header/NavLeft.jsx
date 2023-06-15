@@ -7,7 +7,6 @@ const HeaderLeftContainer = styled.div`
   justify-content: flex-start;
   @media (max-width: 768px) {
     flex: 0;
-    font-weight: 500;
   }
 `
 

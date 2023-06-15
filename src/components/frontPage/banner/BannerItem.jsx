@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const BannerItemContainer = styled.div`
+const BannerItemContainer = styled(Link)`
   font-family: 'Inter', sans-serif;
   position: relative;
   height: 100%;
@@ -120,32 +120,29 @@ export default function BannerItem({image, imageAlt, linkTo, sectionHeading, tex
       <BannerItemContainer
         onMouseOver={handleHover}
         onMouseLeave={stopHover}
+        href={linkTo}
       >
-        <Link
-          href={linkTo}
-        >
-          <BannerFilter 
-            blur={hover}
-          />
-          <ShadowBox 
-            blur={hover}
-          />
-            <Image
-              src={image}
-              alt={imageAlt}
-              placeholder='blur'
-              blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              style={{objectFit: 'cover', borderRadius: '10px'}}
-            />
-            <BannerItemHeadingBox>
-              <BannerHeadingText hover={hover}>{sectionHeading}</BannerHeadingText>
-            </BannerItemHeadingBox>
-            <BannerItemTextBox>
-              <BannerCopyText hover={hover}>{text}</BannerCopyText>
-            </BannerItemTextBox>
-          </Link>
+        <BannerFilter 
+          blur={hover}
+        />
+        <ShadowBox 
+          blur={hover}
+        />
+        <Image
+          src={image}
+          alt={imageAlt}
+          placeholder='blur'
+          blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          style={{objectFit: 'cover', borderRadius: '10px'}}
+        />
+        <BannerItemHeadingBox>
+          <BannerHeadingText hover={hover}>{sectionHeading}</BannerHeadingText>
+        </BannerItemHeadingBox>
+        <BannerItemTextBox>
+          <BannerCopyText hover={hover}>{text}</BannerCopyText>
+        </BannerItemTextBox>
       </BannerItemContainer>
   )
 }

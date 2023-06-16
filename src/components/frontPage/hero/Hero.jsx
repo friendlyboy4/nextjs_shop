@@ -36,7 +36,7 @@ const SlideContainer = styled.div`
 export default function Hero({ images }) {
   const settings = {
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     speed: 300,
     lazyLoad: 'ondemand',
     dots: false,
@@ -47,7 +47,7 @@ export default function Hero({ images }) {
   return (
     <HeroContainer>
       <Slider {...settings}>
-        {images.map((image) => (
+        {images.map((image, index) => (
           <SlideContainer key={image.id}>
             <Image
               src={image.attributes.hero_image_lrg.data.attributes.url}
@@ -57,6 +57,7 @@ export default function Hero({ images }) {
               placeholder='blur'
               blurDataURL={`/_next/image?url=${image.attributes.hero_image_lrg.data.attributes.url}&w=16&q=1`}
               fill
+              priority={index == 0 && true}
               style={{maxWidth: "100%", objectFit: "cover",}}
             />
           </SlideContainer>

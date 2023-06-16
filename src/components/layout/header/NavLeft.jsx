@@ -48,14 +48,15 @@ const NavEl = styled.li`
   @media (max-width: 480px) {
     font-size: 2.6em;
   }
-  :hover {
-    color: goldenrod;
-  }
 `
 
 const LinkStyled = styled(Link)`
   color: ${props => props.theme.colors.headerFontColor};
   text-decoration: none;
+  transition: color 0.3s ease;
+  :hover {
+    color: goldenrod;
+  }
 `
 
 export default function NavLeft({ navbarClose }) {

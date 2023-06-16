@@ -134,7 +134,7 @@ export default function BannerItem({image, imageAlt, linkTo, sectionHeading, tex
           placeholder='blur'
           blurDataURL={`/_next/image?url=${image}&w=16&q=1`}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{objectFit: 'cover', borderRadius: '10px'}}
         />
         <BannerItemHeadingBox>

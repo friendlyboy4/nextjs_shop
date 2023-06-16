@@ -23,7 +23,7 @@ export default function HeaderLogo() {
       <Image
         src={logo}
         alt="Doc Sprocket Shop Logo"
-        sizes="(max-width: 1920px) 100px"
+        sizes="(max-width: 480px) 100px, (max-width: 768px) 100px, (max-width: 1920px) 100px"
         fill
       />
     </LogoContainer>

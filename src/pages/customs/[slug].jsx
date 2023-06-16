@@ -34,7 +34,6 @@ export async function getStaticProps({ params }) {
     props: {
       custom: res.data
     },
-    // cache: 'force-cache',
   }
 }
 

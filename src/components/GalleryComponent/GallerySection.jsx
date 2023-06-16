@@ -84,7 +84,7 @@ export default function GallerySection({ images, alt }) {
               alt={alt}
               placeholder='blur'
               blurDataURL={`/_next/image?url=${image.attributes.url}&w=16&q=1`} 
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 40vw"
+              sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 60vw, 40vw"
               fill 
               style={{objectFit: 'cover'}}
             />
@@ -104,7 +104,7 @@ export default function GallerySection({ images, alt }) {
               <Image 
                 src={image.attributes.formats.thumbnail.url} 
                 alt={alt}
-                sizes="(max-width: 1920px) 125px"
+                sizes="(max-width: 480px) 92px, 150px"
                 fill 
                 style={{objectFit: 'cover', objectPosition: 'center'}}
               />

@@ -33,7 +33,6 @@ export async function getStaticProps({ params }) {
     props: {
       bike: res.data
     },
-    // cache: 'force-cache',
   }
 }
 

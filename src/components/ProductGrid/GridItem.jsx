@@ -116,13 +116,7 @@ export default function GridItem({ bike, frontpage, custom }) {
           placeholder="blur"
           blurDataURL={`/_next/image?url=${images.data[0].attributes.url}&w=16&q=1`}
           fill
-          sizes={
-            frontpage ? (
-              "(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-            ):(
-              "(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-            )
-          }
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
           style={{objectFit: 'cover', borderRadius: '10px'}}
         />
       </GridImageContainer>

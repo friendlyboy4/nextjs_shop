@@ -155,6 +155,5 @@ export async function getStaticProps() {
     props: {
       images: res.data,
     },
-    // revalidate: 1, 
   }
 }

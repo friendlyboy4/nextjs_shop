@@ -55,7 +55,6 @@ export async function getStaticProps() {
       customs: resCustoms.data,
       hero: resHero.data,
     },
-    // revalidate: 1,
   }
 }
 

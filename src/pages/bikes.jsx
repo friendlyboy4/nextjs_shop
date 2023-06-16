@@ -60,6 +60,5 @@ export async function getStaticProps() {
       bikes: resBikes.data,
       hero: resHero.data,
     },
-    // revalidate: 1,
   }
 }

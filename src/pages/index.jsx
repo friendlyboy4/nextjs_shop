@@ -69,6 +69,5 @@ export async function getStaticProps() {
       ebikeBanner: resEbikeBanner.data,
       workshopBanner: resWorkshopBanner.data,
     },
-    // revalidate: 1,
   }
 }

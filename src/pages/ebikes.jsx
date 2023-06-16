@@ -68,8 +68,6 @@ export async function getStaticProps() {
   return {
     props: {
       images: res.data,
-    },
-    // revalidate: 1,
-    
+    },  
   }
 }

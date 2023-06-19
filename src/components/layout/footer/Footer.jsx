@@ -51,11 +51,17 @@ const FooterCopyrightContainer = styled.div`
   color: #666666;
   border-top: 1px solid #00000022;
   background-image: url(${wallpaper.src});
-  background-size: 50%;
-  background-attachment: fixed;
+  background-size: 60%;
+  @media (max-width: 1200px) {
+    background-size: 70%;
+  }
   @media (max-width: 768px) {
     padding: 2rem 2rem 0; 
-  }
+    background-size: 80%;
+  };
+  @media (max-width: 480px) {
+    background-size: 90%;
+  };
 `
 
 const LinkStyled = styled(Link)`

@@ -7,10 +7,18 @@ const MainContainerStyled = styled.div`
   margin: 0 auto;
   padding: 0 2rem;
   background-image: url(${wallpaper.src});
-  background-size: 50%;
-  background-attachment: fixed;
+  background-size: 60%;
+  /* background-attachment: fixed; */
+  @media (max-width: 1200px) {
+    background-size: 70%;
+  }
   @media (max-width: 768px) {
     padding: 0 1rem; 
+    background-size: 80%;
+  };
+  @media (max-width: 480px) {
+    padding: 0 1rem; 
+    background-size: 90%;
   };
 `
 

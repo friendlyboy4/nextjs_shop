@@ -13,7 +13,7 @@ const HeaderRightContainer = styled.div`
   font-weight: 500;
   @media (max-width: 768px) {
     flex-direction: column; 
-    margin-top: 2rem;
+    margin-top: 1rem;
     justify-content: flex-start;
   }
 `
@@ -21,12 +21,13 @@ const HeaderRightContainer = styled.div`
 const IconContainer = styled.div`
   display: flex;
   @media (max-width: 768px) {
-    margin-top: 0.5rem;
+    margin-top: .75rem;
     font-size: 1.5rem;
     width: 100%;
     flex-direction: column;
     >* {
-      margin-bottom: 1.5rem;
+      padding: .75rem 0 .75rem;
+      width: fit-content;
     }    
   }
 `
@@ -51,8 +52,7 @@ const TextItem = styled.div`
     font-size: 2em; 
   }
   @media (max-width: 768px) {
-    padding: 0 4rem 0 0;
-    padding-bottom: 2rem;
+    padding: 1rem 4rem 1rem 0;
   }
   :hover {
     color: goldenrod;
@@ -65,12 +65,14 @@ const LinkStyled = styled(Link)`
 `
 
 const FBIcon = styled(FaFacebookSquare)`
+  margin-left: .5rem;
   color: ${props => props.theme.colors.headerFontColor};
   border-radius: 12px;
   font-size: 2.8em;
   transition: color 0.3s ease;
   @media (max-width: 768px) {
     color: #444444; 
+    margin: 0 3rem 0 -.2rem;
   }
   :hover {
     color: #bbbbbb;
@@ -78,12 +80,13 @@ const FBIcon = styled(FaFacebookSquare)`
 `
 
 const InstaIcon = styled(FaInstagram)`
-  margin-right: 1rem;
+  margin-right: .5rem;
   color: ${props => props.theme.colors.headerFontColor};
   font-size: 2.8em;
   transition: color 0.3s ease;
   @media (max-width: 768px) {
     color: #444444; 
+    margin: 0 3rem 0 -.2rem;
   }
   :hover {
     color: #bbbbbb;

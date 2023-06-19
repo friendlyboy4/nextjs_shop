@@ -25,7 +25,7 @@ const NavList = styled.ul`
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: flex-start;
-    padding-left: 0;
+    padding: 0;
     width: 100%;
     margin: 0;
   }
@@ -34,7 +34,6 @@ const NavList = styled.ul`
 const NavEl = styled.li`
   list-style-type: none;
   font-size: 2.6em;
-  padding: .8em 0 .8em 0;
   transition: color 0.3s ease;
   @media (max-width: 1000px) {
     font-size: 2.4em;
@@ -52,6 +51,8 @@ const NavEl = styled.li`
 
 const LinkStyled = styled(Link)`
   color: ${props => props.theme.colors.headerFontColor};
+  display: block;
+  padding: .8em 0 .8em 0;
   text-decoration: none;
   transition: color 0.3s ease;
   :hover {

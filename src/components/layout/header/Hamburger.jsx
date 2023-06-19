@@ -35,7 +35,7 @@ const Bar3 = styled(Bar)`
   }
 `
 
-export default function Hamburger({ navbarChange, navbarIsOpen }) {
+export function Hamburger({ navbarChange, navbarIsOpen }) {
   return (
     <HamburgerContainer
       onClick={navbarChange}
@@ -48,5 +48,21 @@ export default function Hamburger({ navbarChange, navbarIsOpen }) {
       <Bar2 className={`${navbarIsOpen ? "active" : ""}`} />
       <Bar3 className={`${navbarIsOpen ? "active" : ""}`}/>
     </HamburgerContainer>
+  )
+}
+
+const GhostBurgerBox = styled.div`
+  display: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  @media (max-width: 768px) {
+    display: block;
+    margin-right: 1rem;
+  }
+`
+
+export function GhostBurger() {
+  return (
+    <GhostBurgerBox />
   )
 }

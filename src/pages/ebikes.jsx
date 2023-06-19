@@ -38,7 +38,7 @@ export default function Ebikes({ images }) {
         description="Check out the E-Mu urban commuter. Made just for you"
       />
       <PageHeadingComponent 
-        text='e-bikes'
+        text='e&#x2011;bikes'
         imgSrc={images.attributes.hero_img_lrg.data.attributes.url}
         imgAlt='image of E-Mu ebike'
         imgThumbnail={images.attributes.hero_img_lrg.data.attributes.formats.thumbnail.url}

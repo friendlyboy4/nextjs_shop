@@ -3,9 +3,8 @@ import { useState, useEffect } from 'react';
 import styled from "styled-components";
 import NavLeft from "./NavLeft";
 import NavRight from "./NavRight";
-import Hamburger from "./Hamburger";
-import GhostBurger from "./GhostBurger";
 import HeaderLogo from "./HeaderLogo";
+import { Hamburger, GhostBurger } from './Hamburger';
 
 
 const HeaderContainer = styled.header`
@@ -17,12 +16,12 @@ const HeaderContainer = styled.header`
   background-color: ${props => props.theme.colors.headerBGColor};
   backdrop-filter: ${props => props.theme.colors.headerBlur};
   -webkit-backdrop-filter: ${props => props.theme.colors.headerBlur};
-  filter: drop-shadow(2px 2px 5px #00000011);
+  filter: drop-shadow(2px 2px 5px #00000012);
   width: 100%;
   font-size: 1rem;
   transition: transform 0.3s ease;
   ${props => !props.visible && 
-    'transform: translateY(-8.5rem);'
+    'transform: translateY(-9.5rem);'
   }
   @media (min-width: 768px) and (max-width: 1000px) {
     font-size: 0.8rem;
@@ -30,14 +29,14 @@ const HeaderContainer = styled.header`
 `
 const HeaderInnerContainer = styled.div`
   max-width: ${props => props.theme.layout.contentWidth};
-  padding: 1.6rem 0;
   display: flex;
   margin: 0 auto;
   @media (min-width: 768px) and (max-width: 1260px) {
-    padding: 1.6rem 2rem;
+    padding: 0 2rem;
   }
   @media (max-width: 768px) {
     justify-content: space-between;
+    padding: 1.6rem 0;
   }
 `
 

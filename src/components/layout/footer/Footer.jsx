@@ -3,11 +3,14 @@ import Link from "next/link";
 import { 
   FaInstagram,
   FaFacebookSquare
-} from 'react-icons/fa'
+} from 'react-icons/fa';
+import wallpaper from '../../../assets/util/bike-wallpaper-vector.svg';
 
 
 const FooterBlock = styled.div`
   border-top: 1px solid #00000011;
+  font-family: ${props => props.theme.fonts.fontFamily};
+  color: #333333;
   padding: 8rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -21,16 +24,15 @@ const FooterBlock = styled.div`
 
 `
 
-const FooterContainer = styled.div`
-  margin: 0 2rem;
+const FooterContentContainer = styled.div`
+  margin: 0 4rem;
+  background-color: white;
   display: flex;
   justify-content: space-between;
-  font-family: ${props => props.theme.fonts.fontFamily};
-  color: #333333;
   flex-wrap: wrap;
   max-width: 1200px;
   @media (max-width: 768px) {
-    margin: 0 1rem;
+    margin: 0 2rem;
   }
   @media (max-width: 480px) {
     flex-direction: column;
@@ -43,11 +45,17 @@ const FooterContainer = styled.div`
 
 const FooterCopyrightContainer = styled.div`
   width: 100%;
-  padding-top: 2rem;
+  padding: 2rem 4rem 0;
   margin-top: 2rem;
   font-size: 1.2rem;
   color: #666666;
   border-top: 1px solid #00000022;
+  background-image: url(${wallpaper.src});
+  background-size: 50%;
+  background-attachment: fixed;
+  @media (max-width: 768px) {
+    padding: 2rem 2rem 0; 
+  }
 `
 
 const LinkStyled = styled(Link)`
@@ -147,7 +155,7 @@ export default function Footer({ fade }) {
     <FooterBlock
       fade={fade}
     >
-      <FooterContainer>
+      <FooterContentContainer>
         <FooterContactSection>
           <LinkStyledDSCW>Doc Sprocket Cycle Workshop</LinkStyledDSCW>
           <LinkStyled rel="noopener noreferrer" target="_blank" aria-label="Link to Doc Sprocket Google Maps entry" href="https://g.page/doc-sprocket-cycle-workshop?share">555A King St Newtown NSW 2042</LinkStyled>
@@ -186,18 +194,18 @@ export default function Footer({ fade }) {
             <p>x</p>
           </Times>
         </FooterOpeningHoursSection>
-        <FooterCopyrightContainer>
-          &copy; DSCW 2023 | Built with&nbsp;
-          <Link 
-            style={{color: 'inherit'}}
-            rel="noopener noreferrer" 
-            target="_blank" 
-            href="https://nextjs.org/"
-          >
-            NextJS
-          </Link> by House of Sprocqu&eacute; 
-        </FooterCopyrightContainer>
-      </FooterContainer>
+      </FooterContentContainer>
+      <FooterCopyrightContainer>
+        &copy; DSCW 2023 | Built with&nbsp;
+        <Link 
+          style={{color: 'inherit'}}
+          rel="noopener noreferrer" 
+          target="_blank" 
+          href="https://nextjs.org/"
+        >
+          NextJS
+        </Link> by House of Sprocqu&eacute; 
+      </FooterCopyrightContainer>
       
     </FooterBlock>
   )

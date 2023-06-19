@@ -42,8 +42,8 @@ export default function Layout({ children }) {
       >
         { children }
       </ContentContainer>
-      <Footer fade={navbarIsOpen} />
     </MainContainer>
+    <Footer fade={navbarIsOpen} />
     </>
   )
 }

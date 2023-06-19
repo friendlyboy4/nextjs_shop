@@ -30,7 +30,7 @@ const BannerItemHeadingBox = styled.div`
 
 const BannerItemTextBox = styled(BannerItemHeadingBox)`
   width: 80%;
-  z-index: 99;
+  z-index: 98;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -65,7 +65,6 @@ const BannerCopyText = styled.p`
   background-color: #000000aa;
   text-shadow: 4px 4px 5px #00000088;
   opacity: 0;
-  z-index: 99;
   transition: opacity 0.3s ease, transform 0.3s ease;
   border-radius: 10px;
   ${props => !props.hover} {

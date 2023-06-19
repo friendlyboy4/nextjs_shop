@@ -12,11 +12,10 @@ const HeroContainer = styled.div`
   @media (max-width: 768px) {
     aspect-ratio: 10/6;
     width: 100vw;
-    margin-left: -2rem;
+    margin-left: -1rem;
     filter: none;
   }
   @media (max-width: 480px) {
-    margin-left: -1rem;
     aspect-ratio: 10/7;
   }
 `

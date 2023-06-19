@@ -3,7 +3,8 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   max-width: ${props => props.theme.layout.contentWidth};
-  margin: 2rem auto 8rem;  
+  margin: 0 auto;
+  padding: 2rem 0 8rem;
   font-family: ${props => props.theme.fonts.fontFamily};
   color: ${props => props.theme.fonts.fontColor};
   font-size: 1rem;
@@ -16,7 +17,7 @@ const Container = styled.div`
   }
   @media (max-width: 480px) {
     font-size: .8rem;
-    margin-top: 1rem;  
+    padding-top: 1rem;  
   } 
 `
 

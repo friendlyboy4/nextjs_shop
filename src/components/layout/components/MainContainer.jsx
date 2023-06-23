@@ -8,7 +8,6 @@ const MainContainerStyled = styled.div`
   padding: 0 2rem;
   background-image: url(${wallpaper.src});
   background-size: 60%;
-  /* background-attachment: fixed; */
   @media (max-width: 1200px) {
     background-size: 70%;
   }
@@ -24,7 +23,6 @@ const MainContainerStyled = styled.div`
 
 
 export default function MainContainer({ children, closeNavMenu, showContent }) {
-  console.log(wallpaper)
   return (
     <MainContainerStyled
       onClick={closeNavMenu}

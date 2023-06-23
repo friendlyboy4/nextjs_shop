@@ -24,12 +24,13 @@ const GridContainer = styled.div`
 `
 
 export function ProductGrid({ products, frontpage, custom }) {
+  const sliceValue = (frontpage ? [0, 3] : '')
   return (
     <GridContainer
       frontpage={frontpage}
     >
       {
-        products.map((product) => (          
+        products.slice(...sliceValue).map((product) => (          
           <GridItem 
             key={product.id}
             bike={product.attributes}

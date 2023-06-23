@@ -17,6 +17,9 @@ const nextConfig = {
       }
     ],
   },
+  experimental: {
+    optimizeCss: true,
+  }
 }
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({

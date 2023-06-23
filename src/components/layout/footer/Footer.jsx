@@ -43,9 +43,25 @@ const FooterContentContainer = styled.div`
   }
 `
 
+const CopyrightContent = styled.div`
+  max-width: 1200px;
+  margin: 0 4rem;
+  @media (max-width: 768px) {
+    margin: 0 2rem;
+    margin: 0 auto;
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+  @media (min-width: 1320px) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+`
+
 const FooterCopyrightContainer = styled.div`
   width: 100%;
-  padding: 2rem 4rem 0;
+  padding: 2rem 0 0;
   margin-top: 2rem;
   font-size: 1.2rem;
   color: #666666;
@@ -162,7 +178,7 @@ export default function Footer({ fade }) {
       fade={fade}
     >
       <FooterContentContainer>
-        <FooterContactSection>
+        <FooterContactSection id="contact">
           <LinkStyledDSCW>Doc Sprocket Cycle Workshop</LinkStyledDSCW>
           <LinkStyled rel="noopener noreferrer" target="_blank" aria-label="Link to Doc Sprocket Google Maps entry" href="https://g.page/doc-sprocket-cycle-workshop?share">555A King St Newtown NSW 2042</LinkStyled>
           <LinkStyled rel="noopener noreferrer" target="_blank" aria-label="Link to send an email to Doc Sprocket" href="mailto:info@docsprocket.com.au">info@docsprocket.com.au</LinkStyled>
@@ -202,33 +218,19 @@ export default function Footer({ fade }) {
         </FooterOpeningHoursSection>
       </FooterContentContainer>
       <FooterCopyrightContainer>
-        &copy; DSCW 2023 | Built with&nbsp;
-        <Link 
-          style={{color: 'inherit'}}
-          rel="noopener noreferrer" 
-          target="_blank" 
-          href="https://nextjs.org/"
-        >
-          NextJS
-        </Link> by House of Sprocqu&eacute; 
+        <CopyrightContent>
+          &copy; DSCW 2023 | Built with&nbsp;
+          <Link 
+            style={{color: 'inherit'}}
+            rel="noopener noreferrer" 
+            target="_blank" 
+            href="https://nextjs.org/"
+          >
+            NextJS
+          </Link> by House of Sprocqu&eacute; 
+        </CopyrightContent>
       </FooterCopyrightContainer>
       
     </FooterBlock>
   )
 }
-
-// CONTACT COLUMN
-// logo
-// address
-// phone
-// email
-// insta
-// fb
-
-// NAV COLUMN
-// Home
-// About
-// Bikes
-// Workshop
-// ebikes
-// customs

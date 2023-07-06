@@ -2,23 +2,13 @@ import { fetchAPI } from "@/api/api";
 import styled from "styled-components";
 import CopyBox from "@/components/CopyBox/CopyBox";
 import FadeBox from "@/components/layout/components/FadeBox";
+import ImageGallery from "@/components/ImageGallery/ImageGallery";
+import A from "@/components/A/A";
 import { NextSeo } from "next-seo";
 
 import { useState, useEffect } from "react";
 
 import PageHeadingComponent from "@/components/PageHeadingComponent/PageHeadingComponent";
-
-const A = styled.a`
-  padding: 0 .4rem;
-  color: red;
-  transition: .25s ease-in-out;
-  cursor: pointer;
-  text-decoration: underline;
-  &:hover {
-    background-color: #000000;
-    color: white;
-  }
-`
 
 export default function Ebikes({ images }) {
   const [pageOpen, setPageOpen] = useState(false);
@@ -59,6 +49,13 @@ export default function Ebikes({ images }) {
           you can find more information and images, or book yourself a test ride. 
         </p>
       </CopyBox>
+      {
+        images.attributes.ebikes_img_gallery.data && (
+          <ImageGallery 
+            images={images.attributes.ebikes_img_gallery.data}
+          />
+        )
+      }
     </FadeBox>
   )
 }

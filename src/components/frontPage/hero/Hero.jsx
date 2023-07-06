@@ -23,7 +23,9 @@ const HeroContainer = styled.div`
 const SlideContainer = styled.div`
   position: relative;
   width: 100%;
-  aspect-ratio: 20/9;
+  aspect-ratio: 2/1;
+  /* aspect-ratio: 10/6; */
+  overflow: hidden;
   @media (max-width: 768px) {
     aspect-ratio: 10/6;
   } 
@@ -43,21 +45,23 @@ export default function Hero({ images }) {
     fade: true,
     arrows: false,
   }
+  const imageGallery = images.attributes.HeroImg
+  
   return (
     <HeroContainer>
       <Slider {...settings}>
-        {images.map((image, index) => (
+        {imageGallery.map((image, index) => (
           <SlideContainer key={image.id}>
             <Image
-              src={image.attributes.hero_image_lrg.data.attributes.url}
+              src={image.hero_img_lrg.data.attributes.url}
               alt="banner image"
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1200px) 100vw, 66vw"
               loading="eager"
               placeholder='blur'
-              blurDataURL={`/_next/image?url=${image.attributes.hero_image_lrg.data.attributes.url}&w=16&q=1`}
+              blurDataURL={`/_next/image?url=${image.hero_img_lrg.data.attributes.url}&w=16&q=1`}
               fill
               priority={index == 0 && true}
-              style={{maxWidth: "100%", objectFit: "cover",}}
+              style={{maxWidth: "100%", objectFit: "cover", objectPosition: "center"}}
             />
           </SlideContainer>
         ))}

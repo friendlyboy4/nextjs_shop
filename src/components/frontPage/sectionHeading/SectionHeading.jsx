@@ -5,7 +5,7 @@ const HeadingContainer = styled.div`
   font-size: 1rem;
   display: flex;  
   flex-direction: column;
-  margin: 10em auto 4em;  
+  margin: 6em auto 4em;  
   @media (max-width: 768px) {
     font-size: .8rem;
   }

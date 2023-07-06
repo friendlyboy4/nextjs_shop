@@ -8,11 +8,8 @@ import PageHeadingComponent from "@/components/PageHeadingComponent/PageHeadingC
 import ServicingSection from "@/components/workshop/ServicingSection";
 import ImageGallery from "@/components/ImageGallery/ImageGallery";
 import FadeBox from "@/components/layout/components/FadeBox";
-
-const Copy = styled.p`
-  font-family: ${props => props.theme.fonts.fontFamily};
-  font-size: 2em;
-`
+import CopyBox from "@/components/CopyBox/CopyBox";
+import A from "@/components/A/A";
 
 const SectionHeading = styled.span`
   text-transform: uppercase;
@@ -34,31 +31,31 @@ const HR = styled.hr`
 const RepairsContainer = styled.div`
   display: flex;
   justify-content: space-around;
+  margin: 0 auto;
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: fit-content;
+  }
 `
 const RepairsUl = styled.ul`
   padding-left: 0;
   margin: 0 auto;
+  @media (max-width: 480px) {
+    margin: 0;
+  }
 `
 
 const RepairsLi = styled.li`
   list-style-type: none;
   font-size: 2em;
+  @media (max-width: 768px) {
+    font-size: 1.9em;
+  }
   &::before {
     content: "- ";
   }
 `
 
-const A = styled.a`
-  font-family: monospace;
-  padding: 0 .4rem;
-  color: red;
-  font-size: .9em;
-  transition: .3s ease-in-out;
-  &:hover {
-    background-color: #000000;
-    color: white;
-  }
-`
 export default function Workshop({ images }) {
   const [pageOpen, setPageOpen] = useState(false);
 
@@ -82,30 +79,30 @@ export default function Workshop({ images }) {
         imgAlt='image of Doc Sprocket workbench'
         imgThumbnail={images.attributes.hero_img_lrg.data.attributes.formats.thumbnail.url}
       />
-      <Copy>
+      <CopyBox>
         Doc Sprocket is first and foremost a <b>mechanical workshop</b>. 
         We pride ourselves on our mechanical expertise and the quality of our work. 
         We recognise that many cyclists have a special connection to their bicycle, 
         and with this in mind aim to treat your bike like our own. 
-      </Copy>
+      </CopyBox>
       
-      <Copy>
+      <CopyBox>
         <SectionHeading>Servicing</SectionHeading> is offered at a few tiers depending on your bike's needs:
-      </Copy>
+      </CopyBox>
     
       <ServicingSection />
 
-      <Copy>
+      <CopyBox>
         Turnaround for servicing is typically no more than a few days if we hold all the parts needed for the job. Where parts must be ordered to complete your service, we will do our best to source these parts quickly and will keep you in the loop about timeframes. To book a service or repair, please get in touch via phone or email.
-      </Copy>
+      </CopyBox>
 
       <HR />  
 
-      <Copy>
+      <CopyBox>
         <SectionHeading>Repairs</SectionHeading> are performed on an as-required and per-job basis if your bike doesn't require broader servicing. 
         Typically these jobs will be priced by negotiation, or at our workshop rate of $100/hour. 
         We are game to solve (almost) <b>any</b> issues that you may have, however some more common jobs include: 
-      </Copy>
+      </CopyBox>
       <RepairsContainer>
         <RepairsUl>
           <RepairsLi>Repair flat tyre / replace tube</RepairsLi>
@@ -123,23 +120,23 @@ export default function Workshop({ images }) {
         </RepairsUl>
       </RepairsContainer>
 
-      <Copy>
+      <CopyBox>
         If you are looking for <b>electrical</b> repairs, we are always happy to take a look, 
         but otherwise recommend <A target="_blank" rel="noreferrer" aria-label="Link to website of Glow Worm bike shop in Sydney" href="https://www.glowwormbicycles.com.au">Glow Worm Bicycles</A> in Marrickville. Their friendly and experienced staff are very knowledgeable in all areas of electric bike servicing and repair. 
         We will happily and confidently service road bikes, but for the really fancy stuff you could also contact <A target="_blank" rel="noreferrer" aria-label="Link to website of Vanilla Cycles bike shop in Sydney" href="https://vanillacycles.com">Vanilla Cycles</A> in Marrickville. 
         If you are looking to get wheels built from scratch, we recommend <A target="_blank" rel="noreferrer" aria-label="Link to website of Omafiets bike shop in Sydney" href="https://www.omafiets.com.au">Omafiets</A> in Alexandria, who can also help with any matters related to cycle touring, rack mounts, frame bags and the like. 
-      </Copy>
+      </CopyBox>
 
       <HR />
     
-      <Copy>
+      <CopyBox>
       <SectionHeading>Rebuilds</SectionHeading> of vintage bikes are a specialty of Doc Sprocket Cycle Workshop. 
         We have the tools, parts and know-how to get your classic steel road bikes, 90s MTBs or obscure European tourers back on the road. 
         These jobs can be highly variable in labour and parts cost so we typically charge per job after assessing the bike. 
         Such jobs may involve just an in-depth service, all the way up to a complete strip, rebuild and detail. 
         If you've got a dusty old bike you can't bear to part with, get in touch and see if we can help return it to glory. 
         Take a look at some of our past rebuilds below...
-      </Copy>
+      </CopyBox>
 
 
       <ImageGallery 

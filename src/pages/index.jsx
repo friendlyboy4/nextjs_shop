@@ -1,3 +1,5 @@
+'use client'
+
 import { fetchAPI } from "@/api/api";
 import Hero from "@/components/frontPage/hero/Hero";
 import BannerContainer from '@/components/frontPage/banner/BannerContainer';
@@ -7,9 +9,7 @@ import { useState, useEffect } from "react";
 import FadeBox from "@/components/layout/components/FadeBox";
 import { NextSeo } from "next-seo";
 
-Home.title='Classy second-hand, vintage and custom bikes';
-
-export default function Home({ bikes, customs, hero, ebikeBanner, workshopBanner }) {
+export default function Home({ bikes, customs, hero, test, ebikeBanner, workshopBanner }) {
   const [pageOpen, setPageOpen] = useState(false);
 
   useEffect(() => {
@@ -58,7 +58,7 @@ export default function Home({ bikes, customs, hero, ebikeBanner, workshopBanner
 export async function getStaticProps() {
   const resBikes = await fetchAPI("/used-bikes?populate=*", {}, {cache: 'force-cache'})
   const resCustoms = await fetchAPI("/custom-bikes?populate=*", {}, {cache: 'force-cache'})
-  const resHero = await fetchAPI("/heroes?populate=*", {}, {cache: 'force-cache'})
+  const resHero = await fetchAPI("/frontpage-gallery?populate=deep", {}, {cache: 'force-cache'})
   const resEbikeBanner = await fetchAPI("/ebikes-banner?populate=*", {}, {cache: 'force-cache'})
   const resWorkshopBanner = await fetchAPI("/workshop-banner?populate=*", {}, {cache: 'force-cache'})
   return {

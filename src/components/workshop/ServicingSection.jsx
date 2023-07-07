@@ -61,7 +61,7 @@ export default function ServicingSection() {
             for regularly serviced bikes needing a tune up
           </ServiceSubtext>
           <ServiceUl>
-            <ServiceLi>wide down frame and wheels</ServiceLi>
+            <ServiceLi>wipe down frame and wheels</ServiceLi>
             <ServiceLi>tune brakes and gears</ServiceLi>
             <ServiceLi>degrease and lube drivetrain</ServiceLi>
             <ServiceLi>straighten derailleur hanger</ServiceLi>

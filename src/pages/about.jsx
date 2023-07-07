@@ -19,11 +19,10 @@ export default function About({ images }) {
       setPageOpen(false)
     }
   }, [])
-  console.log(images)
   return (
     <FadeBox showContent={pageOpen}>
       <NextSeo 
-        title="About Doc Sprocket"
+        title="About Us"
         description="Doc Sprocket was established in 2021. Learn more here..."   
       />
       <PageHeadingComponent 
@@ -50,7 +49,7 @@ export default function About({ images }) {
         We believe that cycling can be deeply empowering for the individual, and transformative for local neighbourhoods, suburbs and cities. 
         Going forward, we would like to strengthen our links with the local community through events and workshops. In particular, we would love
         to offer workshops in cycle servicing and repair to empower and build resilience within the local cycling community. 
-        If this would interest you please get in touch and have a chat. 
+        If this would interest you please get in touch. Meanwhile enjoy some photos from our past few years...
       </CopyBox>
 
       {

@@ -24,7 +24,7 @@ export default function Ebikes({ images }) {
       showContent={pageOpen}
     >
       <NextSeo 
-        title="The E-Mu electric bike - Made for Sydney"
+        title="The E-Mu Electric Bike - Made for Sydney"
         description="Check out the E-Mu urban commuter. Made just for you"
       />
       <PageHeadingComponent 

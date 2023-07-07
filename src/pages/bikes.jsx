@@ -24,7 +24,7 @@ export default function Bikes({ bikes, hero }) {
       showContent={pageOpen}
     >
       <NextSeo 
-        title="Bikes 4 sale"
+        title="Bikes 4 Sale"
         description="Browse our catalogue of second-hand and vintage bikes for sale. All bikes come fully serviced with a satisfaction guarantee."   
       />
       <PageHeadingComponent 

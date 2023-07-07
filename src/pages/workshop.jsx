@@ -1,5 +1,4 @@
 import { fetchAPI } from "@/api/api";
-import Image from "next/image";
 import styled from "styled-components"
 import { NextSeo } from "next-seo";
 import { useState, useEffect } from "react";
@@ -70,7 +69,7 @@ export default function Workshop({ images }) {
       showContent={pageOpen}
     >
       <NextSeo 
-        title="Workshop and repairs"
+        title="Workshop and Repairs"
         description="Information about servicing, repairs and mechanical work offered by our experienced mechanical workshop."   
       />
       <PageHeadingComponent 

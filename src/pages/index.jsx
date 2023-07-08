@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import FadeBox from "@/components/layout/components/FadeBox";
 import { NextSeo } from "next-seo";
 
-export default function Home({ bikes, customs, hero, test, ebikeBanner, workshopBanner }) {
+export default function Home({ bikes, customs, hero, ebikeBanner, workshopBanner }) {
   const [pageOpen, setPageOpen] = useState(false);
 
   useEffect(() => {

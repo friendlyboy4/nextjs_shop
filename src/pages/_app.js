@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#ffc40d" />
         <meta name="theme-color" content="#00ff00" />
       </Head>
-      <GoogleAnalytics GA_TRACKING_ID={process.env.GA_TRACKING_ID} />
+      <GoogleAnalytics GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID} />
       <DefaultSeo 
         titleTemplate = '%s | Doc Sprocket'
       />

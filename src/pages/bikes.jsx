@@ -25,7 +25,8 @@ export default function Bikes({ bikes, hero }) {
     >
       <NextSeo 
         title="Bikes 4 Sale"
-        description="Browse our catalogue of second-hand and vintage bikes for sale. All bikes come fully serviced with a satisfaction guarantee."   
+        description="Browse our range of preloved and vintage bikes. All of our bikes come fully serviced with a six month warranty for peace of mind."
+        canonical="https://www.docsprocket.com.au/bikes"
       />
       <PageHeadingComponent 
         text="bikes"

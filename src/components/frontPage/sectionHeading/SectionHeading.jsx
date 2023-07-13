@@ -39,39 +39,11 @@ const SeeAllButton = styled(Link)`
   }
 `
 
-// const SeeAllButton = styled(Link)`
-//   width: fit-content;
-//   margin: 0 auto;
-//   padding: 1em;
-//   position: relative;
-//   display: inline;
-//   text-decoration: none;
-//   color: white;
-//   background-color: #222222;
-//   box-shadow: 
-//     0 0 0 1px white,
-//     0 0 0 2px #222222,
-//     3px 3px 4px #00000066;
-//   transition: .1s ease;
-//   &:active {
-//     box-shadow: 
-//     0 0 0 1px white,
-//     0 0 0 2px #222222,
-//     1px 1px 1px #000000;
-//     transform: translate(1px, 1px);
-//     background-color: #888888;
-//   }
-// `
-
-
-
 const ButtonText = styled.p`
   font-family: ${props => props.theme.fonts.fontFamily};
   font-size: 2em;
   margin: 0;
 `
-
-
 
 export default function SectionHeading({ text, href }) {
   return (

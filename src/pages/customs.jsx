@@ -22,7 +22,8 @@ export default function Customs({ customs, hero }) {
     >
       <NextSeo 
         title="Custom Built Bikes"
-        description="Browse our frames and project bikes. Custom build a bike from the ground up just how you want it."
+        description="Want something completely unique? Pick out one of our eye-catching vintage frames and tell us how you want it built. We'll handle the rest..."
+        canonical="https://www.docsprocket.com.au/customs"
       />
       <PageHeadingComponent 
         text='customs'

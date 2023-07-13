@@ -25,7 +25,8 @@ export default function Home({ bikes, customs, hero, ebikeBanner, workshopBanner
     >
       <NextSeo 
         title='Classy second-hand, vintage and custom bikes'
-        description='Quality pre-loved bicycles, expert mechanical work and honest advice'
+        description='Quality pre-loved bicycles, expert mechanical work and honest advice. Give us a bell or swing by our Newtown showroom.'
+        canonical="https://www.docsprocket.com.au"
       />
       <Hero 
         images={hero}

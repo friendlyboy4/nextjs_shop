@@ -9,6 +9,7 @@ import ImageGallery from "@/components/ImageGallery/ImageGallery";
 import FadeBox from "@/components/layout/components/FadeBox";
 import CopyBox from "@/components/CopyBox/CopyBox";
 import A from "@/components/A/A";
+import Anchor from "@/components/layout/components/Anchor";
 
 const SectionHeading = styled.span`
   text-transform: uppercase;
@@ -70,7 +71,9 @@ export default function Workshop({ images }) {
     >
       <NextSeo 
         title="Workshop and Repairs"
-        description="Information about servicing, repairs and mechanical work offered by our experienced mechanical workshop."   
+        description="Got bike problems? We'll have you back in the saddle in no time. We provide servicing, repairs and more. Give your bike the care it deserves."
+        canonical="https://www.docsprocket.com.au/workshop"
+
       />
       <PageHeadingComponent 
         text='workshop'
@@ -83,21 +86,26 @@ export default function Workshop({ images }) {
         We pride ourselves on our mechanical expertise and the quality of our work. 
         We recognise that many cyclists have a special connection to their bicycle, 
         and with this in mind aim to treat your bike like our own. 
+
+        To book a service or repair, please call us on <A rel="noopener noreferrer" target="_blank" aria-label="Link to call Doc Sprocket" href="tel: +61450519496">0450 519 496</A> or 
+        email at <A rel="noopener noreferrer" target="_blank" aria-label="Link to send an email to Doc Sprocket" href="mailto:info@docsprocket.com.au">info@docsprocket.com.au</A>
       </CopyBox>
       
       <CopyBox>
+        <Anchor id="servicing"/>
         <SectionHeading>Servicing</SectionHeading> is offered at a few tiers depending on your bike's needs:
       </CopyBox>
     
       <ServicingSection />
 
       <CopyBox>
-        Turnaround for servicing is typically no more than a few days if we hold all the parts needed for the job. Where parts must be ordered to complete your service, we will do our best to source these parts quickly and will keep you in the loop about timeframes. To book a service or repair, please get in touch via phone or email.
+        Turnaround for servicing is typically no more than a few days if we hold all the parts needed for the job. Where parts must be ordered to complete your service, we will do our best to source these parts quickly and will keep you in the loop about timeframes.
       </CopyBox>
 
       <HR />  
 
       <CopyBox>
+        <Anchor id="repairs" />
         <SectionHeading>Repairs</SectionHeading> are performed on an as-required and per-job basis if your bike doesn't require broader servicing. 
         Typically these jobs will be priced by negotiation, or at our workshop rate of $100/hour. 
         We are game to solve (almost) <b>any</b> issues that you may have, however some more common jobs include: 
@@ -129,12 +137,13 @@ export default function Workshop({ images }) {
       <HR />
     
       <CopyBox>
-      <SectionHeading>Rebuilds</SectionHeading> of vintage bikes are a specialty of Doc Sprocket Cycle Workshop. 
-        We have the tools, parts and know-how to get your classic steel road bikes, 90s MTBs or obscure European tourers back on the road. 
-        These jobs can be highly variable in labour and parts cost so we typically charge per job after assessing the bike. 
-        Such jobs may involve just an in-depth service, all the way up to a complete strip, rebuild and detail. 
-        If you've got a dusty old bike you can't bear to part with, get in touch and see if we can help return it to glory. 
-        Take a look at some of our past rebuilds below...
+        <Anchor id="rebuilds" />
+        <SectionHeading>Rebuilds</SectionHeading> of vintage bikes are a specialty of Doc Sprocket Cycle Workshop. 
+          We have the tools, parts and know-how to get your classic steel road bikes, 90s MTBs or obscure European tourers back on the road. 
+          These jobs can be highly variable in labour and parts cost so we typically charge per job after assessing the bike. 
+          Such jobs may involve just an in-depth service, all the way up to a complete strip, rebuild and detail. 
+          If you've got a dusty old bike you can't bear to part with, get in touch and see if we can help return it to glory. 
+          Take a look at some of our past rebuilds below...
       </CopyBox>
 
 

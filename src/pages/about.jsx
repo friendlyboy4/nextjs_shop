@@ -23,7 +23,8 @@ export default function About({ images }) {
     <FadeBox showContent={pageOpen}>
       <NextSeo 
         title="About Us"
-        description="Doc Sprocket was established in 2021. Learn more here..."   
+        description="Doc Sprocket opened in 2021 in an old tea shop on South King Street. If you want to know more you'll have to visit our website."
+        canonical="https://www.docsprocket.com.au/about"
       />
       <PageHeadingComponent 
         text='about'

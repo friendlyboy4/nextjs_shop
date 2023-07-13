@@ -25,7 +25,8 @@ export default function Ebikes({ images }) {
     >
       <NextSeo 
         title="The E-Mu Electric Bike - Made for Sydney"
-        description="Check out the E-Mu urban commuter. Made just for you"
+        description="Check out the E-Mu Electric Bike. It's an urban adventurer designed just for you. Form meets function with a gorgeous design and all the mod cons."
+        canonical="https://www.docsprocket.com.au/ebikes"
       />
       <PageHeadingComponent 
         text='e&#x2011;bikes'

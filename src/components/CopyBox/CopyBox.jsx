@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const CopyBox = styled.div`
+  position: relative;
   margin: 2rem 0;
   width: 100%;
   font-size: 2rem;

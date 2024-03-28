@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import styled from 'styled-components';
+import Link from "next/link";
+import styled from "styled-components";
 
 const HeaderLeftContainer = styled.div`
   display: flex;
@@ -8,14 +8,14 @@ const HeaderLeftContainer = styled.div`
   @media (max-width: 768px) {
     flex: 0;
   }
-`
+`;
 
 const NavContainer = styled.nav`
   display: flex;
   @media (max-width: 768px) {
-    width: 100%; 
+    width: 100%;
   }
-`
+`;
 const NavList = styled.ul`
   display: flex;
   flex-direction: row;
@@ -29,7 +29,7 @@ const NavList = styled.ul`
     width: 100%;
     margin: 0;
   }
-`
+`;
 
 const NavEl = styled.li`
   list-style-type: none;
@@ -42,34 +42,31 @@ const NavEl = styled.li`
     padding: 0 1.75vw;
   }
   @media (max-width: 768px) {
-    border-bottom: 1px solid #00000011; 
+    border-bottom: 1px solid #00000011;
   }
   @media (max-width: 480px) {
     font-size: 2.6em;
   }
-`
+`;
 
 const LinkStyled = styled(Link)`
-  color: ${props => props.theme.colors.headerFontColor};
+  color: ${(props) => props.theme.colors.headerFontColor};
   display: block;
-  padding: .8em 0 .8em 0;
+  padding: 0.8em 0 0.8em 0;
   text-decoration: none;
   transition: color 0.3s ease;
   :hover {
     color: goldenrod;
   }
-`
+`;
 
 export default function NavLeft({ navbarClose }) {
   return (
     <HeaderLeftContainer>
-
       <NavContainer>
-
         <NavList>
-
           <NavEl>
-            <LinkStyled 
+            <LinkStyled
               href="/bikes"
               onClick={navbarClose}
             >
@@ -78,16 +75,16 @@ export default function NavLeft({ navbarClose }) {
           </NavEl>
 
           <NavEl>
-            <LinkStyled 
+            <LinkStyled
               href="/workshop"
               onClick={navbarClose}
             >
               Workshop
             </LinkStyled>
           </NavEl>
-          
+
           <NavEl>
-            <LinkStyled 
+            <LinkStyled
               href="/customs"
               onClick={navbarClose}
             >
@@ -96,18 +93,15 @@ export default function NavLeft({ navbarClose }) {
           </NavEl>
 
           <NavEl>
-            <LinkStyled 
+            <LinkStyled
               href="/ebikes"
-              onClick={navbarClose}  
-            >              
+              onClick={navbarClose}
+            >
               E&#x2011;Bikes
             </LinkStyled>
           </NavEl>
-
         </NavList>
-
       </NavContainer>
-
     </HeaderLeftContainer>
-  )
+  );
 }

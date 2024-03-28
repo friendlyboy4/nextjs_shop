@@ -8,10 +8,12 @@ const HeaderPaneStyled = styled.div`
   height: 100vh;
   transform: translateX(-110%);
   -webkit-transform: translateX(-110%);
-  transition: transform .3s ease, opacity .3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   opacity: 0;
-  backdrop-filter: ${props => props.theme.colors.headerBlur};
-  -webkit-backdrop-filter: ${props => props.theme.colors.headerBlur};
+  backdrop-filter: ${(props) => props.theme.colors.headerBlur};
+  -webkit-backdrop-filter: ${(props) => props.theme.colors.headerBlur};
   &.active {
     opacity: 1;
     transform: translateX(0);
@@ -19,13 +21,8 @@ const HeaderPaneStyled = styled.div`
   @media (max-width: 480px) {
     width: 52%;
   }
-`
-
+`;
 
 export default function HeaderPane({ active }) {
-  return (
-    <HeaderPaneStyled 
-      className={`${active ? "active" : ""}`}
-    />
-  )
+  return <HeaderPaneStyled className={`${active ? "active" : ""}`} />;
 }

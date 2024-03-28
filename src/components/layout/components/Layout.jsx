@@ -1,49 +1,94 @@
+import React from "react";
+
 import Header from "@/components/layout/header/Header";
 import HeaderPane from "../header/HeaderPane";
+import EmuHeader from "@/components/Emu/EmuHeader/EmuHeader";
 import ContentContainer from "@/components/layout/components/ContentContainer";
 import MainContainer from "@/components/layout/components/MainContainer";
 import Footer from "@/components/layout/footer/Footer";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Layout({ children }) {
+export default function Layout({ children, emu }) {
+  ////////// HEADER CONTROL ///////////
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  const [navbarIsOpen, setNavbarIsOpen] = useState(false)
-  const navbarHandler = () => {
-    setNavbarIsOpen((prevState) => !prevState)
-    if (!navbarIsOpen) {
-      document.body.style.overflowY = "hidden"
-    } else {
-      document.body.style.overflowY = "visible"
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY < lastScrollY || window.scrollY < 50) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+      setLastScrollY(window.scrollY);
     }
-  }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
+  /////////////////////
+
+  const [navbarIsOpen, setNavbarIsOpen] = useState(false);
+
+  const navbarHandler = () => {
+    setNavbarIsOpen((prevState) => !prevState);
+    if (!navbarIsOpen) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "visible";
+    }
+  };
 
   const closeNavMenu = () => {
     if (navbarIsOpen) {
-      setNavbarIsOpen(false)
-      document.body.style.overflowY = "visible"
+      setNavbarIsOpen(false);
+      document.body.style.overflowY = "visible";
     }
-  }
+  };
+
   return (
     <>
-    <Header 
-      navbarChange={navbarHandler}
-      navbarIsOpen={navbarIsOpen}
-      navbarClose={closeNavMenu}
-    />
-    <HeaderPane 
-      active={navbarIsOpen} 
-    />
-    <MainContainer
-      closeNavMenu={closeNavMenu}
-    >
-      <ContentContainer
-        fade={navbarIsOpen}
-      >
-        { children }
-      </ContentContainer>
-    </MainContainer>
-    <Footer fade={navbarIsOpen} />
+      <Header
+        navbarChange={navbarHandler}
+        navbarIsOpen={navbarIsOpen}
+        navbarClose={closeNavMenu}
+        show={show}
+        yPos={lastScrollY}
+        emu={emu}
+      />
+      <HeaderPane active={navbarIsOpen} />
+
+      {emu ? (
+        <>
+          {/* <EmuHeader 
+          visible={show}
+          yPos={lastScrollY}
+        /> */}
+          <MainContainer
+            closeNavMenu={closeNavMenu}
+            emu
+          >
+            {children}
+          </MainContainer>
+        </>
+      ) : (
+        <>
+          <MainContainer closeNavMenu={closeNavMenu}>
+            <ContentContainer fade={navbarIsOpen}>{children}</ContentContainer>
+          </MainContainer>
+        </>
+      )}
+
+      <Footer fade={navbarIsOpen} />
     </>
-  )
+  );
 }

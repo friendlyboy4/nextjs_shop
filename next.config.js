@@ -9,21 +9,21 @@ const nextConfig = {
     domains: ["localhost"],
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-        port: '',
-        pathname: '/dpz9kmpj5/image/upload/**',
-      }
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "",
+        pathname: "/dpz9kmpj5/image/upload/**",
+      },
     ],
   },
   experimental: {
     optimizeCss: true,
-  }
-}
+  },
+};
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
-module.exports = withBundleAnalyzer({})
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+module.exports = withBundleAnalyzer({});
 
-module.exports = nextConfig
+module.exports = nextConfig;

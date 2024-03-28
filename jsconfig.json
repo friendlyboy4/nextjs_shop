@@ -4,6 +4,6 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "jsx": "preserve",
+    "jsx": "preserve"
   }
 }

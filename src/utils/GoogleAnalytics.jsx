@@ -1,13 +1,13 @@
 import Script from "next/script";
 
-export default function GoogleAnalytics ({ GA_TRACKING_ID }) {
+export default function GoogleAnalytics({ GA_TRACKING_ID }) {
   return (
     <>
-      <Script 
+      <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        strategy="afterInteractive" 
+        strategy="afterInteractive"
       />
-      <Script 
+      <Script
         id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -22,5 +22,5 @@ export default function GoogleAnalytics ({ GA_TRACKING_ID }) {
         }}
       />
     </>
-  )
+  );
 }

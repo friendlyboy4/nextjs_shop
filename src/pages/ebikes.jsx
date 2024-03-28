@@ -1,71 +1,150 @@
 import { fetchAPI } from "@/api/api";
 import styled from "styled-components";
-import CopyBox from "@/components/CopyBox/CopyBox";
-import FadeBox from "@/components/layout/components/FadeBox";
-import ImageGallery from "@/components/ImageGallery/ImageGallery";
-import A from "@/components/A/A";
 import { NextSeo } from "next-seo";
-
 import { useState, useEffect } from "react";
 
-import PageHeadingComponent from "@/components/PageHeadingComponent/PageHeadingComponent";
+import Calendly from "@/components/Emu/EmuCalendar/Calendly";
 
-export default function Ebikes({ images }) {
+import OuterContainer from "@/components/Emu/EmuLayout/OuterContainer";
+import Hero from "@/components/Emu/EmuHero/Hero";
+import AboutBoxVariant from "@/components/Emu/EmuAboutBox/aboutBoxVariant";
+import Quote, { SpecsQuote } from "@/components/Emu/EmuQuote/Quote";
+import ReviewsContainer from "@/components/Emu/EmuReviews/ReviewsContainer";
+import EmuBody from "@/components/Emu/EmuBody/emuBody";
+import Spacer from "@/components/Emu/EmuSpacer/Spacer";
+import FadeBox from "@/components/layout/components/FadeBox";
+import EmuSpecs from "@/components/Emu/EmuSpecs/EmuSpecs";
+
+import emuLightweight from "@/img/features/emuLightweight.jpg";
+import emuPeace from "@/img/features/emuPeace.jpg";
+import EmuFooter from "@/components/Emu/EmuFooter/EmuFooter";
+import EmuGallery from "@/components/Emu/EmuGallery/EmuGallery";
+
+export default function Emu() {
   const [pageOpen, setPageOpen] = useState(false);
+  const [showCalendly, setShowCalendly] = useState(false);
 
   useEffect(() => {
-    setPageOpen(true)
+    setPageOpen(true);
     return function cleanup() {
-      setPageOpen(false)
+      setPageOpen(false);
+    };
+  }, []);
+
+  function calendarToggle() {
+    setShowCalendly((prevState) => !prevState);
+    if (!showCalendly) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "visible";
     }
-  }, [])
+  }
+
+  const myFunc = () => {
+    console.log("ASDJFAJSDFOASDOF");
+  };
+
   return (
-    <FadeBox
-      showContent={pageOpen}
-    >
-      <NextSeo 
-        title="The E-Mu Electric Bike - Made for Sydney"
-        description="Check out the E-Mu Electric Bike. It's an urban adventurer designed just for you. Form meets function with a gorgeous design and all the mod cons."
-        canonical="https://www.docsprocket.com.au/ebikes"
+    <>
+      <Calendly
+        showCalendly={showCalendly}
+        calendarToggle={calendarToggle}
+        // navbarChange={navbarHandler}
+        // navbarIsOpen={navbarIsOpen}
+        // navbarClose={closeNavMenu}
       />
-      <PageHeadingComponent 
-        text='e&#x2011;bikes'
-        imgSrc={images.attributes.hero_img_lrg.data.attributes.url}
-        imgAlt='image of E-Mu ebike'
-        imgThumbnail={images.attributes.hero_img_lrg.data.attributes.formats.thumbnail.url}
-      />
-      <CopyBox>
-        <p>
-          The E-Mu electric bike is now available exclusively at Doc Sprocket Cycle Workshop. 
-          We have drawn upon our substantial experience with servicing and selling electric bikes 
-          to create the ideal e-bike for commuting and recreation in Sydney. As such, the E-Mu prioritises safety, 
-          reliability and functionality while also maintaining a fair price point. 
-          <br/><br/>
-          The E-Mu is specially designed to ensure easy and affordable servicing and repair. 
-          It uses mainstream, non-proprietary technology rather than closed systems such as that found on many other brands. 
-          For peace of mind, the E-Mu comes standard with two years of free servicing, 
-          as well as a two year warranty on mechnical and electrical parts. 
-          <br/><br/>
-          To learn more, please get in touch or visit the dedicated <A target="_blank" rel="noreferrer" aria-label="Read more about the E-Mu electric bike here" href="https://e-mu.au">website for the E-Mu</A> where 
-          you can find more information and images, or book yourself a test ride. 
-        </p>
-      </CopyBox>
-      {
-        images.attributes.ebikes_img_gallery.data && (
-          <ImageGallery 
-            images={images.attributes.ebikes_img_gallery.data}
+      <FadeBox showContent={pageOpen}>
+        <NextSeo
+          title="The E-Mu E-Bike by Doc Sprocket"
+          description="The E-Mu Urban E-Bike is your ideal workhorse commuter, weekend adventurer and errand-running machine. Test ride today!"
+          canonical="https://www.docsprocket.com.au"
+        />
+        <Hero></Hero>
+        <OuterContainer>
+          <EmuFooter buttonPress={calendarToggle} />
+          <Quote copy="Wherever life takes you - The E-Mu's got your back. It's a rugged daily commuter that can also haul a load of groceries or carry you away on your weekend adventures." />
+          <AboutBoxVariant
+            image={emuLightweight}
+            headline="Lightweight. Reliable. Fun."
+            text={
+              <>
+                All the features you need -{" "}
+                <b>
+                  carrier rack, integrated lights, big battery and powerful
+                  motor
+                </b>{" "}
+                - in a lightweight, stylish package. Enjoy{" "}
+                <b>quality components</b> from established manufacturers such as
+                Shimano, Tektro and Bafang, <b>safety features</b> such as brake
+                cutoff sensors, and a variety of{" "}
+                <b>adjustable riding positions</b> to fit all shapes and sizes.
+              </>
+            }
+            reverse
           />
-        )
-      }
-    </FadeBox>
-  )
+          <EmuBody />
+          <AboutBoxVariant
+            image={emuPeace}
+            headline="Peace of mind."
+            text={
+              <>
+                The E-Mu is fully assembled and finished at our Newtown
+                workshop, and is backed by a comprehensive
+                <b> two year warranty </b>
+                and <b> two years free servicing</b>. It&apos;s designed to be
+                <b> cheap and easy to repair and service</b>, and uses widely
+                available, non-proprietary components. And if you have any
+                issues, we are <b> just a phone call away!</b>
+              </>
+            }
+          />
+          {/* <EmuBody /> */}
+          {/* <AboutBoxVariant
+            image={test1}
+            headline="My other car is an E-MU"
+            text={
+              <>
+                With an <b>integrated cargo rack</b> and <b>powerful motor</b>,
+                the E-Mu has what it takes to haul a week&apos;s worth of
+                groceries or help with your weekend errands.
+              </>
+            }
+            reverse
+          /> */}
+          <Spacer />
+          <div
+            id="testimonials"
+            style={{ scrollMarginTop: "90px" }}
+          />
+          <Quote
+            copy="Here's what some of our happy customers have to say about their E-Mu:"
+            last
+          />
+          <ReviewsContainer />
+          <SpecsQuote copy="TECH SPECS:" />
+          <EmuSpecs />
+          <Quote copy="GALLERY" />
+          <EmuGallery />
+        </OuterContainer>
+      </FadeBox>
+    </>
+  );
 }
 
+// export async function getStaticProps() {
+//   return
+// }
+
 export async function getStaticProps() {
-  const res = await fetchAPI("/ebikes-page?populate=*", {}, {cache: 'force-cache'})
+  const res = await fetchAPI(
+    "/workshop-page?populate=*",
+    {},
+    { cache: "force-cache" },
+  );
   return {
     props: {
       images: res.data,
-    },  
-  }
+      emu: true,
+    },
+  };
 }

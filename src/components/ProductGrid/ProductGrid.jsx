@@ -11,34 +11,33 @@ const GridContainer = styled.div`
   row-gap: 2em;
   margin: 3rem 0 4rem;
   @media (max-width: 1200px) {
-    font-size: .9rem; 
+    font-size: 0.9rem;
   }
   @media (max-width: 768px) {
     margin: 2rem 0 3rem;
-    ${props => props.frontpage ? 'grid-template-columns: repeat(1, 1fr);' : 'grid-template-columns: repeat(2, 1fr);'}
+    ${(props) =>
+      props.frontpage
+        ? "grid-template-columns: repeat(1, 1fr);"
+        : "grid-template-columns: repeat(2, 1fr);"}
   }
   @media (max-width: 480px) {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 3em;
   }
-`
+`;
 
 export function ProductGrid({ products, frontpage, custom }) {
-  const sliceValue = (frontpage ? [0, 3] : '')
+  const sliceValue = frontpage ? [0, 3] : "";
   return (
-    <GridContainer
-      frontpage={frontpage}
-    >
-      {
-        products.slice(...sliceValue).map((product) => (          
-          <GridItem 
-            key={product.id}
-            bike={product.attributes}
-            frontpage={frontpage}
-            custom={custom}
-          />
-        ))
-      }
+    <GridContainer frontpage={frontpage}>
+      {products.slice(...sliceValue).map((product) => (
+        <GridItem
+          key={product.id}
+          bike={product.attributes}
+          frontpage={frontpage}
+          custom={custom}
+        />
+      ))}
     </GridContainer>
-  )
+  );
 }

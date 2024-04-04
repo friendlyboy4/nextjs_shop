@@ -59,9 +59,6 @@ const ButtonText = styled.div`
 `;
 
 export default function Button({ buttonPress }) {
-  const myFunc = () => {
-    console.log("TESTINGISNIDASFG");
-  };
   return (
     <TestRideButton onClick={buttonPress}>
       <ButtonText>

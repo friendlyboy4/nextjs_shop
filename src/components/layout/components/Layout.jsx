@@ -2,7 +2,6 @@ import React from "react";
 
 import Header from "@/components/layout/header/Header";
 import HeaderPane from "../header/HeaderPane";
-import EmuHeader from "@/components/Emu/EmuHeader/EmuHeader";
 import ContentContainer from "@/components/layout/components/ContentContainer";
 import MainContainer from "@/components/layout/components/MainContainer";
 import Footer from "@/components/layout/footer/Footer";
@@ -14,18 +13,17 @@ export default function Layout({ children, emu }) {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY < lastScrollY || window.scrollY < 50) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
-      setLastScrollY(window.scrollY);
-    }
-  };
-
   useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== "undefined") {
+        if (window.scrollY < lastScrollY || window.scrollY < 50) {
+          setShow(true);
+        } else {
+          setShow(false);
+        }
+        setLastScrollY(window.scrollY);
+      }
+    };
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);
 
@@ -69,10 +67,6 @@ export default function Layout({ children, emu }) {
 
       {emu ? (
         <>
-          {/* <EmuHeader 
-          visible={show}
-          yPos={lastScrollY}
-        /> */}
           <MainContainer
             closeNavMenu={closeNavMenu}
             emu

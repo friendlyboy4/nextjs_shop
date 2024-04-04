@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import FadeBox from "@/components/layout/components/FadeBox";
 import CopyBox from "@/components/CopyBox/CopyBox";
 import { NextSeo } from "next-seo";
@@ -50,10 +49,10 @@ export default function About({ images }) {
         for commuting in Sydney&apos;s harsh urban environs. You can learn more
         about that{" "}
         <A
-          target="_blank"
+          // target="_blank"
           rel="noreferrer"
           aria-label="Read more about the E-Mu electric bike here"
-          href="https://e-mu.au"
+          href="/ebikes"
         >
           here
         </A>

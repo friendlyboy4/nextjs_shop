@@ -11,8 +11,7 @@ const PriceContainer = styled.div`
 
 const PriceText = styled.span`
   font-size: 2rem;
-  /* white-space: nowrap; */
-  font-family: "Roboto slab", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-weight: bold;
   line-height: 1.2;
   @media (max-width: 768px) {

@@ -50,9 +50,7 @@ const BannerHeadingText = styled.h2`
   line-height: 1;
   background-color: #000000aa;
   text-shadow: 4px 4px 5px #00000088;
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
   border-radius: 10px;
   ${(props) => !props.hover} {
     opacity: 0;
@@ -67,9 +65,7 @@ const BannerCopyText = styled.p`
   background-color: #000000aa;
   text-shadow: 4px 4px 5px #00000088;
   opacity: 0;
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   border-radius: 10px;
   ${(props) => !props.hover} {
     opacity: 1;
@@ -85,9 +81,7 @@ const BannerFilter = styled.div`
   height: 100%;
   z-index: 98;
   border-radius: 10px;
-  transition:
-    backdrop-filter 0.3s ease,
-    background-color 0.3s ease,
+  transition: backdrop-filter 0.3s ease, background-color 0.3s ease,
     border 0.1s ease;
   ${(props) => !props.blur} {
     backdrop-filter: blur(5px);

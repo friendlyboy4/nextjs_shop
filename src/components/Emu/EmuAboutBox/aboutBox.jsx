@@ -61,7 +61,7 @@ const TextBox = styled.div`
 
 const FeatureHeading = styled.h3`
   font-size: 2.2em;
-  font-family: "inter", sans-serif;
+  font-family: "Inter", sans-serif;
   text-align: center;
   color: #222222;
   margin: 0 auto;
@@ -75,7 +75,7 @@ const FeatureHeading = styled.h3`
 
 const FeatureText = styled.p`
   font-size: 1.2em;
-  font-family: "inter", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   text-align: center;
   color: ${(props) => props.theme.fonts.aboutFontColor};

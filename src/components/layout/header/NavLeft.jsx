@@ -36,12 +36,12 @@ const NavEl = styled.li`
   font-size: 2.6em;
   transition: color 0.3s ease;
   @media (max-width: 1000px) {
-    font-size: 2.4em;
   }
   @media (min-width: 768px) {
     padding: 0 1.75vw;
   }
   @media (max-width: 768px) {
+    font-size: 2.4em;
     border-bottom: 1px solid #00000011;
   }
   @media (max-width: 480px) {

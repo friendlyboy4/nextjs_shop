@@ -5,7 +5,6 @@ export const globals = {
     fontColor: "#333333",
     aboutFontColor: "#666666",
     fontFamily: "'Jost', sans-serif",
-    emuFont: "'Outfit', sans-serif",
   },
   colors: {
     headerBGColor: "#ffffffaa",

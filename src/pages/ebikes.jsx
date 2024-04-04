@@ -40,18 +40,11 @@ export default function Emu() {
     }
   }
 
-  const myFunc = () => {
-    console.log("ASDJFAJSDFOASDOF");
-  };
-
   return (
     <>
       <Calendly
         showCalendly={showCalendly}
         calendarToggle={calendarToggle}
-        // navbarChange={navbarHandler}
-        // navbarIsOpen={navbarIsOpen}
-        // navbarClose={closeNavMenu}
       />
       <FadeBox showContent={pageOpen}>
         <NextSeo

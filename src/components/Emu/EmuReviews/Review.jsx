@@ -10,7 +10,7 @@ const ReviewItem = styled.div`
   margin: 0 1rem;
   padding: 3rem;
   row-gap: 3em;
-  font-family: "outfit", sans-serif;
+  font-family: "Jost", sans-serif;
   background-color: #aaaaaa11;
   backdrop-filter: blur(2px);
   border: 1px solid #88888822;

@@ -78,8 +78,7 @@ const TextBox = styled.div`
 
 const FeatureHeading = styled.h3`
   font-size: 2em;
-  /* font-family: "inter", sans-serif; */
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   text-align: center;
   color: #222222;
@@ -99,6 +98,7 @@ const FeatureHeading = styled.h3`
 
 const FeatureText = styled.p`
   font-size: 1.2em;
+  /* font-family: "Inter", sans-serif; */
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-align: justify;

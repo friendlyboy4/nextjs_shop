@@ -53,6 +53,7 @@ export default function SlideBlueForest() {
         sizes="100vw"
         quality={90}
         // unoptimized={true}
+        priority={true}
         placeholder="blur"
         fill
         style={{

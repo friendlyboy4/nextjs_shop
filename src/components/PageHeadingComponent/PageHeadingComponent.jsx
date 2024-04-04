@@ -31,9 +31,7 @@ const MainHeadingText = styled.h1`
   line-height: 1;
   background-color: #000000aa;
   text-shadow: 4px 4px 5px #00000088;
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
   border-radius: 10px;
   @media (max-width: 768px) {
     font-size: 7em;

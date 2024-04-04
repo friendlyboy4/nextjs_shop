@@ -62,6 +62,7 @@ export default function EmuGallery() {
               src={blueKey}
               alt="emu key"
               fill
+              sizes="(max-width: 1920px) 50vw, (max-width: 1000px) 95vw"
             />
           </GalleryItem>
           <GalleryItem>
@@ -69,6 +70,7 @@ export default function EmuGallery() {
               src={orangeDrivetrain}
               alt="emu drivetrain"
               fill
+              sizes="(max-width: 1920px) 50vw, (max-width: 1000px) 95vw"
             />
           </GalleryItem>
           <GalleryItem>
@@ -76,6 +78,7 @@ export default function EmuGallery() {
               src={blueLight}
               alt="emu light"
               fill
+              sizes="(max-width: 1920px) 50vw, (max-width: 1000px) 95vw"
             />
           </GalleryItem>
           <GalleryItem>
@@ -83,6 +86,7 @@ export default function EmuGallery() {
               src={orangeRack}
               alt="emu rack"
               fill
+              sizes="(max-width: 1920px) 50vw, (max-width: 1000px) 95vw"
             />
           </GalleryItem>
           <GalleryItem>
@@ -90,6 +94,7 @@ export default function EmuGallery() {
               src={blueDisc}
               alt="emu disc"
               fill
+              sizes="(max-width: 1920px) 50vw, (max-width: 1000px) 95vw"
             />
           </GalleryItem>
           <GalleryItem>
@@ -97,6 +102,7 @@ export default function EmuGallery() {
               src={orangeStem}
               alt="emu stem"
               fill
+              sizes="(max-width: 1920px) 50vw, (max-width: 1000px) 95vw"
             />
           </GalleryItem>
           <GalleryItem>
@@ -104,6 +110,7 @@ export default function EmuGallery() {
               src={blueMain}
               alt="emu blue"
               fill
+              sizes="(max-width: 1920px) 50vw, (max-width: 1000px) 95vw"
             />
           </GalleryItem>
           <GalleryItem>
@@ -111,6 +118,7 @@ export default function EmuGallery() {
               src={orangeMain}
               alt="emu orange"
               fill
+              sizes="(max-width: 1920px) 50vw, (max-width: 1000px) 95vw"
             />
           </GalleryItem>
         </GalleryGrid>

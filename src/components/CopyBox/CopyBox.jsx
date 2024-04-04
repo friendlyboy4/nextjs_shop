@@ -6,7 +6,10 @@ const CopyBox = styled.div`
   width: 100%;
   font-size: 2rem;
   line-height: 1.8;
-  font-family: ${(props) => props.theme.fonts.fontFamily};
+  /* font-family: ${(props) => props.theme.fonts.fontFamily}; */
+  /* font-family: "outfit"; */
+  /* font-family: serif; */
+  font-family: "Jost";
   @media (max-width: 768px) {
     font-size: 1.8rem;
   }

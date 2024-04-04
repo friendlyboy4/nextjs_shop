@@ -122,7 +122,13 @@ const FeatureText = styled.p`
   }
 `;
 
-export default function AboutBoxVariant({ image, headline, text, reverse }) {
+export default function AboutBoxVariant({
+  image,
+  headline,
+  text,
+  reverse,
+  priority,
+}) {
   return (
     <Container reverse={reverse}>
       <TextBoxContainer reverse={reverse}>
@@ -153,6 +159,7 @@ export default function AboutBoxVariant({ image, headline, text, reverse }) {
           fill
           sizes="(max-width: 1920px) 50vw, (max-width: 1000px) 95vw"
           style={{ objectFit: "cover", borderRadius: "10px" }}
+          priority={priority}
         />
       </ImageBox>
     </Container>

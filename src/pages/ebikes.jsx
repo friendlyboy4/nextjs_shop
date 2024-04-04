@@ -58,6 +58,7 @@ export default function Emu() {
           <Quote copy="Wherever life takes you - The E-Mu's got your back. It's a rugged daily commuter that can also haul a load of groceries or carry you away on your weekend adventures." />
           <AboutBoxVariant
             image={emuLightweight}
+            priority={true}
             headline="Lightweight. Reliable. Fun."
             text={
               <>

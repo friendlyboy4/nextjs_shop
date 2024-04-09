@@ -28,8 +28,10 @@ export default function Home({
   return (
     <FadeBox showContent={pageOpen}>
       <NextSeo
-        title="Classy second-hand, vintage and custom bikes"
-        description="Quality pre-loved bicycles, expert mechanical work and honest advice. Give us a bell or swing by our Newtown showroom."
+        // title="Classy second-hand, vintage and custom bikes"
+        title="Second Hand Bikes In Sydney | Used Bikes"
+        // description="Quality pre-loved bicycles, expert mechanical work and honest advice. Give us a bell or swing by our Newtown showroom."
+        description="Explore Doc Sprocket's collection of second-hand, used, & custom bikes in Sydney. Buy our dependable 2nd hand bikes. Visit & find your ideal ride!"
         canonical="https://www.docsprocket.com.au"
       />
       <Hero images={hero} />

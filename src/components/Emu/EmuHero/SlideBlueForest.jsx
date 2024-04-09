@@ -51,7 +51,6 @@ export default function SlideBlueForest() {
         src={blueForest}
         alt="Emu posing in the forest"
         sizes="100vw"
-        quality={90}
         // unoptimized={true}
         priority={true}
         placeholder="blur"

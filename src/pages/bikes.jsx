@@ -22,8 +22,10 @@ export default function Bikes({ bikes, hero }) {
   return (
     <FadeBox showContent={pageOpen}>
       <NextSeo
-        title="Bikes 4 Sale"
-        description="Browse our range of preloved and vintage bikes. All of our bikes come fully serviced with a six month warranty for peace of mind."
+        // title="Bikes 4 Sale"
+        title="Vintage and Rebuilt Bikes for Sale in Sydney"
+        // description="Browse our range of preloved and vintage bikes. All of our bikes come fully serviced with a six month warranty for peace of mind."
+        description="You will love Doc Sprocket's exclusive collection of vintage and rebuilt bikes for sale. Each comes with unparalleled craftsmanship. Visit our store today."
         canonical="https://www.docsprocket.com.au/bikes"
       />
       <PageHeadingComponent

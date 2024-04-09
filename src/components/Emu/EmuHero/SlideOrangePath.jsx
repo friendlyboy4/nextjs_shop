@@ -47,7 +47,6 @@ export default function SlideOrangePath() {
         src={orangePath}
         alt="Emu on the path"
         sizes="100vw"
-        quality={90}
         // unoptimized={true}
         placeholder="blur"
         fill

@@ -56,7 +56,6 @@ export default function SlideOrangeBush() {
         src={orangeBush}
         alt="Emu in the bush"
         sizes="100vw"
-        quality={90}
         // unoptimized={true}
         placeholder="blur"
         fill

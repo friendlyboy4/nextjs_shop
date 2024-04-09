@@ -62,7 +62,6 @@ export default function SlideBlueTraffic() {
         src={blueTraffic}
         alt="Emu in the city"
         sizes="100vw"
-        quality={90}
         // unoptimized={true}
         placeholder="blur"
         fill

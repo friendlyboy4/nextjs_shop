@@ -20,7 +20,7 @@ export default function Customs({ customs, hero }) {
     <FadeBox showContent={pageOpen}>
       <NextSeo
         title="Custom Built Bikes"
-        description="Want something completely unique? Pick out one of our eye-catching vintage frames and tell us how you want it built. We'll handle the rest..."
+        description="Want something completely unique? Pick out one of our eye-catching vintage frames and tell us how you want it built. We'll handle the rest!"
         canonical="https://www.docsprocket.com.au/customs"
       />
       <PageHeadingComponent

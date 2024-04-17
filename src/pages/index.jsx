@@ -34,6 +34,7 @@ export default function Home({
         description="Explore Doc Sprocket's collection of second-hand, used, & custom bikes in Sydney. Buy our dependable 2nd hand bikes. Visit & find your ideal ride!"
         canonical="https://www.docsprocket.com.au"
       />
+      <h1 style={{ visibility: "hidden", position: "absolute" }}>HOME</h1>
       <Hero images={hero} />
       <SectionHeading
         text="OUR BIKES"

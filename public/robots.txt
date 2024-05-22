@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.docsprocket.com.au
+
+# Sitemaps
+Sitemap: https://www.docsprocket.com.au/sitemap.xml

@@ -15,6 +15,10 @@ export default function App({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1"
         />
+        <meta name="google-site-verification" content="eN267wwfbGr-35LvMNaE8lAH9n-NNVKwZfMAu6ECcDI" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />  
+        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" /> 
         <link
           rel="apple-touch-icon"
           sizes="180x180"

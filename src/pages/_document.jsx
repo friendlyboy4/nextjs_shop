@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -31,6 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <GoogleTagManager htmId={process.env.GOOGLE_TAG_MANAGER_ID} />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"

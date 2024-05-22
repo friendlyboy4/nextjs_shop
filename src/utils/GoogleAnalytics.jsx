@@ -18,6 +18,7 @@ export default function GoogleAnalytics({ GA_TRACKING_ID }) {
             gtag('config', '${GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
+            gtag('set', {cookie_flags: 'SameSite=None;Secure'});
           `,
         }}
       />

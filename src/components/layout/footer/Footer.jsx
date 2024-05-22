@@ -193,13 +193,13 @@ export default function Footer({ fade }) {
             rel="noopener noreferrer"
             target="_blank"
             aria-label="Link to call Doc Sprocket"
-            href="tel: +61450519496"
+            href="tel: 0450519496"
           >
             0450 519 496
           </LinkStyled>
           <FooterSocialsLogosContainer>
             <Link
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               target="_blank"
               aria-label="Link to Doc Sprocket Instagram page"
               href="https://www.instagram.com/docsprocketnewtown/"
@@ -207,7 +207,7 @@ export default function Footer({ fade }) {
               <InstaIcon />
             </Link>
             <Link
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               target="_blank"
               aria-label="Link to Doc Sprocket Facebook page"
               href="https://www.facebook.com/docsprocketnewtown/"
@@ -250,7 +250,7 @@ export default function Footer({ fade }) {
           &copy; DSCW {new Date().getFullYear()} | Built with&nbsp;
           <Link
             style={{ color: "inherit" }}
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             target="_blank"
             href="https://nextjs.org/"
           >

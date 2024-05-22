@@ -109,7 +109,7 @@ export default function NavRight({ navbarClose }) {
       </TextContainer>
       <IconContainer>
         <LinkStyled
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer"
           target="_blank"
           aria-label="Link to Doc Sprocket Instagram page"
           href="https://www.instagram.com/docsprocketnewtown/"
@@ -118,7 +118,7 @@ export default function NavRight({ navbarClose }) {
         </LinkStyled>
 
         <LinkStyled
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer"
           target="_blank"
           aria-label="Link to Doc Sprocket Facebook page"
           href="https://www.facebook.com/docsprocketnewtown/"

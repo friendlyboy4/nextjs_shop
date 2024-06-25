@@ -56,7 +56,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <GoogleAnalytics
         GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID}
-        GTM_ID={process.env.GOOGLE_TAG_MANAGER_ID}
+        GTM_ID={process.env.NEXT_PUBLIC_GTM_ID}
       />
       <DefaultSeo titleTemplate="%s | Doc Sprocket" />
       <ThemeProvider theme={globals}>

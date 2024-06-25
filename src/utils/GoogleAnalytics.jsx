@@ -1,15 +1,16 @@
 import Script from "next/script";
 
-export default function GoogleAnalytics({ GA_TRACKING_ID }) {
+export default function GoogleAnalytics({ GA_TRACKING_ID, GTM_ID }) {
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`}
         strategy="afterInteractive"
       />
       <Script
         id="google-analytics"
         strategy="afterInteractive"
+        TRACKING
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];

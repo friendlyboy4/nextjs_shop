@@ -52,7 +52,7 @@ export default function Emu() {
           title="E-Bikes for Sale in Sydney | Best Affordable Electric Bike"
           // description="The E-Mu Urban E-Bike is your ideal workhorse commuter, weekend adventurer and errand-running machine. Test ride today!"
           description="Want to buy the best affordable electric bike in Sydney? Doc Sprocket have top E-bikes for sale. Visit our store today for the best electric bikes."
-          canonical="https://www.docsprocket.com.au"
+          canonical="https://www.docsprocket.com.au/ebikes"
         />
         <Hero></Hero>
         <OuterContainer>

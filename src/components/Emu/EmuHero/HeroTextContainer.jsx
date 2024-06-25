@@ -28,7 +28,7 @@ export const HeroTextContainerStyled = styled.div`
   }
 `;
 
-const HeroHeader = styled.h1`
+const HeroHeader = styled.h2`
   font-size: 7em;
   text-align: right;
   margin: 0;

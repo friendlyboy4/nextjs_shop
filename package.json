@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/runtime": "^7.24.7",
     "@next/bundle-analyzer": "^13.4.5",
     "@next/third-parties": "^14.2.3",
     "1s": "^0.0.0",

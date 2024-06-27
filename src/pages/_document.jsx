@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { GoogleTagManager } from "@next/third-parties/google";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -47,7 +46,6 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          <GoogleTagManager gtmId={`${process.env.NEXT_PUBLIC_GTM_ID}`} />
           <Main />
           <NextScript />
         </body>

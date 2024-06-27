@@ -6,6 +6,8 @@ import ContentContainer from "@/components/layout/components/ContentContainer";
 import MainContainer from "@/components/layout/components/MainContainer";
 import Footer from "@/components/layout/footer/Footer";
 
+import { GoogleTagManager } from "@next/third-parties/google";
+
 import { useState, useEffect } from "react";
 
 export default function Layout({ children, emu }) {
@@ -55,6 +57,15 @@ export default function Layout({ children, emu }) {
 
   return (
     <>
+      <GoogleTagManager gtmId={`${process.env.NEXT_PUBLIC_GTM_ID}`} />
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        ></iframe>
+      </noscript>
       <Header
         navbarChange={navbarHandler}
         navbarIsOpen={navbarIsOpen}

@@ -32,7 +32,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <GoogleTagManager htmId={process.env.GOOGLE_TAG_MANAGER_ID} />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
@@ -48,6 +47,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
+          <GoogleTagManager gtmId={`${process.env.NEXT_PUBLIC_GTM_ID}`} />
           <Main />
           <NextScript />
         </body>

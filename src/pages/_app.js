@@ -19,6 +19,7 @@ export default function App({ Component, pageProps }) {
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />  
         <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" /> 
+        
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -56,7 +57,6 @@ export default function App({ Component, pageProps }) {
       </Head>
       <GoogleAnalytics
         GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID}
-        GTM_ID={process.env.NEXT_PUBLIC_GTM_ID}
       />
       <DefaultSeo titleTemplate="%s | Doc Sprocket" />
       <ThemeProvider theme={globals}>

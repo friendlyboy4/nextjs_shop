@@ -1,12 +1,8 @@
 import Script from "next/script";
 
-export default function GoogleAnalytics({ GA_TRACKING_ID, GTM_ID }) {
+export default function GoogleAnalytics({ GA_TRACKING_ID }) {
   return (
     <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id='${GTM_ID}'`}
-        strategy="afterInteractive"
-      />
       <Script
         id="google-analytics"
         strategy="afterInteractive"

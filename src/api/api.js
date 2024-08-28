@@ -8,9 +8,8 @@ import qs from "qs";
 
 // Gets address of strapi API and appends to request function
 export function getStrapiURL(path = "") {
-  return `${
-    process.env.PUBLIC_STRAPI_API_URL || "http://localhost:1337"
-  }${path}`;
+  return `${process.env.PUBLIC_STRAPI_API_URL || "http://localhost:1337"
+    }${path}`;
 }
 /**
  * Helper to make GET requests to Strapi API endpoints

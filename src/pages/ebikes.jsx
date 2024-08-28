@@ -19,6 +19,8 @@ import emuLightweight from "@/img/features/emuLightweight.jpg";
 import emuPeace from "@/img/features/emuPeace.jpg";
 import EmuFooter from "@/components/Emu/EmuFooter/EmuFooter";
 import EmuGallery from "@/components/Emu/EmuGallery/EmuGallery";
+import WhyChooseSection from "@/components/Emu/EmuWhyChoose/WhyChoose";
+import EmuVideo from "@/components/Emu/EmuVideo/EmuVideo";
 
 export default function Emu() {
   const [pageOpen, setPageOpen] = useState(false);
@@ -55,6 +57,7 @@ export default function Emu() {
           canonical="https://www.docsprocket.com.au/ebikes"
         />
         <Hero></Hero>
+        {/* <EmuVideo /> */}
         <OuterContainer>
           <EmuFooter buttonPress={calendarToggle} />
           <Quote copy="Wherever life takes you - The E-Mu's got your back. It's a rugged daily commuter that can also haul a load of groceries or carry you away on your weekend adventures." />
@@ -117,6 +120,11 @@ export default function Emu() {
             last
           />
           <ReviewsContainer />
+          {/* <Quote
+            copy="Why choose us?"
+            last
+          />
+          <WhyChooseSection /> */}
           <SpecsQuote copy="TECH SPECS:" />
           <EmuSpecs />
           <Quote copy="GALLERY" />

@@ -10,8 +10,10 @@ const LogoContainer = styled(Link)`
   filter: invert(16%) sepia(1%) saturate(0%) hue-rotate(96deg) brightness(96%)
     contrast(87%);
   transition: filter 0.3s ease;
+  margin-right: 3rem;
   @media (max-width: 768px) {
     height: 3.6rem;
+    flex: 1 1 0px;
   }
   :hover {
     filter: invert(69%) sepia(17%) saturate(0%) hue-rotate(204deg)

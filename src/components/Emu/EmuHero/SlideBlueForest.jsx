@@ -22,7 +22,8 @@ const HeroTextContainer = styled(HeroTextContainerStyled)`
   right: 5vw;
   bottom: 10%;
   @media (max-width: 768px) {
-    bottom: 5%;
+    bottom: 2vw;
+    right: 2vw;
   }
 `;
 

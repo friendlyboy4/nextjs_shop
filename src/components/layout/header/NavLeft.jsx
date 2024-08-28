@@ -1,10 +1,11 @@
 import Link from "next/link";
 import styled from "styled-components";
+import IconContainer from "./IconContainer";
 
 const HeaderLeftContainer = styled.div`
   display: flex;
   flex: 3;
-  justify-content: flex-start;
+  justify-content: space-between;
   @media (max-width: 768px) {
     flex: 0;
   }
@@ -12,9 +13,7 @@ const HeaderLeftContainer = styled.div`
 
 const NavContainer = styled.nav`
   display: flex;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  width: 100%;
 `;
 const NavList = styled.ul`
   display: flex;
@@ -22,6 +21,7 @@ const NavList = styled.ul`
   justify-content: space-between;
   padding: 0 1.5em;
   flex: 1 0;
+  margin-top: 1rem;
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: flex-start;
@@ -33,7 +33,7 @@ const NavList = styled.ul`
 
 const NavEl = styled.li`
   list-style-type: none;
-  font-size: 2.6em;
+  font-size: 2.8em;
   transition: color 0.3s ease;
   @media (max-width: 1000px) {
   }
@@ -52,7 +52,7 @@ const NavEl = styled.li`
 const LinkStyled = styled(Link)`
   color: ${(props) => props.theme.colors.headerFontColor};
   display: block;
-  padding: 0.8em 0 0.8em 0;
+  padding: 0.4em 0;
   text-decoration: none;
   transition: color 0.3s ease;
   :hover {

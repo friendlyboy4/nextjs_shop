@@ -63,7 +63,7 @@ export default function Hero() {
     <HeroContainer>
       <SliderStyled {...settings}>
         <SlideBlueForest />
-        <SlideBlueTraffic />
+        {/* <SlideBlueTraffic /> */}
         <SlideOrangeBush />
       </SliderStyled>
     </HeroContainer>

@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+const HamburgerWrapper = styled.div`
+  display: none;
+  @media(max-width: 768px) {
+    display: flex;
+    flex: 1 1 0px;
+    justify-content: flex-start;
+  }
+`
 const HamburgerContainer = styled.div`
   display: none;
   cursor: pointer;
@@ -37,17 +45,19 @@ const Bar3 = styled(Bar)`
 
 export function Hamburger({ navbarChange, navbarIsOpen }) {
   return (
-    <HamburgerContainer
-      onClick={navbarChange}
-      onKeyDown={navbarChange}
-      role="button"
-      aria-label="button to show navbar"
-      tabIndex="0"
-    >
-      <Bar1 className={`${navbarIsOpen ? "active" : ""}`} />
-      <Bar2 className={`${navbarIsOpen ? "active" : ""}`} />
-      <Bar3 className={`${navbarIsOpen ? "active" : ""}`} />
-    </HamburgerContainer>
+    <HamburgerWrapper>
+      <HamburgerContainer
+        onClick={navbarChange}
+        onKeyDown={navbarChange}
+        role="button"
+        aria-label="button to show navbar"
+        tabIndex="0"
+      >
+        <Bar1 className={`${navbarIsOpen ? "active" : ""}`} />
+        <Bar2 className={`${navbarIsOpen ? "active" : ""}`} />
+        <Bar3 className={`${navbarIsOpen ? "active" : ""}`} />
+      </HamburgerContainer>
+    </HamburgerWrapper>
   );
 }
 

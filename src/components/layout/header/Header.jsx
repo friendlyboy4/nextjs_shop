@@ -5,7 +5,8 @@ import NavLeft from "./NavLeft";
 import NavRight from "./NavRight";
 import HeaderLogo from "./HeaderLogo";
 import { Hamburger, GhostBurger } from "./Hamburger";
-import EmuHeader from "@/components/Emu/EmuHeader/EmuHeader";
+import HeaderUpper from "./HeaderUpper";
+import CallButton from "./CallButton";
 
 const HeaderContainer = styled.div`
   font-family: ${(props) => props.theme.fonts.fontFamily};
@@ -19,8 +20,8 @@ const HeaderContainer = styled.div`
   filter: drop-shadow(2px 2px 5px #00000012);
   width: 100%;
   font-size: 1rem;
-  transition: transform 0.3s ease;
-  transform: ${(props) => !props.visible && "translateY(-9.5rem)"};
+  transition: transform 0.2s ease;
+  transform: ${(props) => !props.visible && "translateY(-4.5rem)"};
   @media (min-width: 768px) and (max-width: 1000px) {
     font-size: 0.8rem;
   }
@@ -68,6 +69,16 @@ const HeaderContentContainer = styled.div`
   }
 `;
 
+const CallButtonWrapper = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    flex: 1 1 0px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+`;
+
 export default function Header({
   navbarChange,
   navbarIsOpen,
@@ -103,6 +114,7 @@ export default function Header({
   return (
     <>
       <HeaderContainer visible={show}>
+        <HeaderUpper />
         <HeaderInnerContainer>
           <Hamburger
             navbarChange={navbarChange}
@@ -113,8 +125,11 @@ export default function Header({
             <NavLeft navbarClose={navbarClose} />
             <NavRight navbarClose={navbarClose} />
           </HeaderContentContainer>
+          <CallButtonWrapper>
+            <CallButton />
+          </CallButtonWrapper>
 
-          <GhostBurger />
+          {/* <GhostBurger /> */}
         </HeaderInnerContainer>
       </HeaderContainer>
       {/* {

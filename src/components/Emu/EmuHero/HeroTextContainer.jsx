@@ -7,11 +7,7 @@ export const HeroTextContainerStyled = styled.div`
   z-index: 999;
   font-size: 0.9rem;
   background-color: #00000022;
-  /* border-radius: 10px; */
-  /* border-bottom: 2px solid #000000cc;
-  border-right: 1px solid #000000; */
-  /* background-color: black; */
-  /* color: #ffaa00; */
+  border-radius: 15px;
   color: white;
   font-family: "Inter", sans-serif;
   @media (max-width: 1600px) {
@@ -49,8 +45,28 @@ const HeroCopy = styled.h3`
 const HeroTextDivider = styled.div`
   width: 80%;
   border-bottom: 2px solid white;
-  /* margin: 1rem 0.5rem; */
   margin: 1em 1em 1em auto;
+`;
+
+const HeroCTAContainer = styled.div`
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  border: 3px solid #22c55e;
+  background-color: #22c55e;
+  width: fit-content;
+`;
+
+const HeroCallNowText = styled.p`
+  font-size: 4em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  text-shadow: 2px 2px 2px #00000066;
 `;
 
 export const HeroTextContent = ({ heading, copy }) => (
@@ -58,5 +74,19 @@ export const HeroTextContent = ({ heading, copy }) => (
     <HeroHeader>{heading}</HeroHeader>
     <HeroTextDivider />
     <HeroCopy>{copy}</HeroCopy>
+    <a
+      href="tel: 0450 519 496"
+      style={{
+        textDecoration: "none",
+        display: "flex",
+        justifyContent: "flex-end",
+      }}
+    >
+      <HeroCTAContainer>
+        <HeroCallNowText style={{ textDecoration: "none" }}>
+          From $2199 - Call Now!
+        </HeroCallNowText>
+      </HeroCTAContainer>
+    </a>
   </>
 );

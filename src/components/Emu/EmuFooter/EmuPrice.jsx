@@ -27,8 +27,8 @@ export default function EmuPrice() {
   return (
     <PriceContainer>
       <PriceText>
-        RRP <br />
-        $2500
+        FROM <br />
+        $2199
       </PriceText>
     </PriceContainer>
   );

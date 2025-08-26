@@ -129,6 +129,17 @@ export default function Emu() {
           <EmuSpecs />
           <Quote copy="GALLERY" />
           <EmuGallery />
+          <p
+            style={{
+              fontSize: "2rem",
+              margin: "6rem",
+              marginTop: 0,
+            }}
+          >
+            Please note: Before using this vehicle, check the applicable local
+            laws relating to your intended use of the vehicle on roads and road
+            related areas.
+          </p>
         </OuterContainer>
       </FadeBox>
     </>
